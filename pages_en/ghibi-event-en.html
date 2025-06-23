@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+  <title>GHIBLI EVENT | STUDIO GHIBLI</title>
+
+  <!-- favicon -->
+  <link rel="icon" href="../images/favicon.png">
+
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  
+  
+  <!-- bootstrap icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  
+
+  <!-- style -->
+  <!-- css 연결해주세요 -->
+  <link rel="stylesheet" href="../css/text-animation.css">
+  <link rel="stylesheet" href="../css/responsive-mobile.css">
+  
+</head>
+
+
+<body>
+  <!---------------- header ---------------->
+  <div class="header-include ghibli-data-header"></div>
+
+  <!---------------- banner ---------------->
+  <section class="banner">
+    <div class="header-banner">
+      <div class="header-banner-title">
+        <div class="each-title-wrap01">
+          <span><b class="each-title point01">#</b>Castle in the Sky</span>
+          <span><b class="each-title point02">#</b>My Neighbor Totoro</span>
+          <span><b class="each-title point03">#</b>Kiki's Delivery Service</span>
+          <span><b class="each-title point04">#</b>Nausicaä of the Valley of the Wind</span>
+          <span><b class="each-title point01">#</b>Porco Rosso</span>
+          <span><b class="each-title point02">#</b>Princess Mononoke</span>
+          <span><b class="each-title point03">#</b>Howl's Moving Castle</span>
+          <span><b class="each-title point04">#</b>Spirited Away</span>
+          <span><b class="each-title point01">#</b>Tales from Earthsea</span>
+          <span><b class="each-title point02">#</b>From Up on Poppy Hill</span>
+          <span><b class="each-title point03">#</b>The Wind Rises</span>
+          <span><b class="each-title point04">#</b>When Marnie Was There</span>
+          <span><b class="each-title point01">#</b>Whisper of the Heart</span>
+          <span><b class="each-title point02">#</b>The Cat Returns</span>
+          <span><b class="each-title point03">#</b>Ponyo</span>
+          <span><b class="each-title point04">#</b>Ocean Waves</span>
+          <span><b class="each-title point01">#</b>Arrietty</span>
+          <span><b class="each-title point02">#</b>The Tale of the Princess Kaguya</span>
+          <span><b class="each-title point03">#</b>Whisper of the Heart</span>
+        </div>
+        <div class="each-title-wrap02">
+          <span><b class="each-title point04">#</b>Nausicaä of the Valley of the Wind</span>
+          <span><b class="each-title point02">#</b>The Tale of the Princess Kaguya</span>
+          <span><b class="each-title point01">#</b>Porco Rosso</span>
+          <span><b class="each-title point02">#</b>Princess Mononoke</span>
+          <span><b class="each-title point01">#</b>Tales from Earthsea</span>
+          <span><b class="each-title point03">#</b>Kiki's Delivery Service</span>
+          <span><b class="each-title point03">#</b>Howl's Moving Castle</span>
+          <span><b class="each-title point04">#</b>When Marnie Was There</span>
+          <span><b class="each-title point03">#</b>Whisper of the Heart</span>
+          <span><b class="each-title point04">#</b>Spirited Away</span>
+          <span><b class="each-title point02">#</b>From Up on Poppy Hill</span>
+          <span><b class="each-title point03">#</b>The Wind Rises</span>
+          <span><b class="each-title point01">#</b>Whisper of the Heart</span>
+          <span><b class="each-title point02">#</b>The Cat Returns</span>
+          <span><b class="each-title point02">#</b>My Neighbor Totoro</span>
+          <span><b class="each-title point01">#</b>Castle in the Sky</span>
+          <span><b class="each-title point03">#</b>Ponyo</span>
+          <span><b class="each-title point04">#</b>Ocean Waves</span>
+          <span><b class="each-title point01">#</b>Arrietty</span>
+        </div>
+      </div>
+      <div class="header-banner-inner">
+        <h2 class="banner-title">
+          Ghibli Events
+        </h2>
+        <img src="../images/sub-mainvisual03.png" alt="Totoro" />
+      </div>
+    </div>
+    <ul class="breadcrumb">
+      <li><a href="../index.html"><i class="bi bi-house-fill"></i></a></li>
+      <li><i class="bi bi-chevron-right"></i></li>
+      <li><a href="#">Ghibli Events</a></li>
+    </ul>
+  </section>
+  
+  <!-- 서브페이지 이너 배너 -->
+
+  <!---------------- main ---------------->
+  <section class="ghibli-event">
+    <div class="event-inner">
+      <div class="calendar-container">
+        <div class="header">
+          <button id="prevMonthBtn">◀</button>
+          <h2 id="monthTitle">June</h2>
+          <button id="nextMonthBtn">▶</button>
+        </div>
+        <div class="weekdays">
+          <div>Sun</div>
+          <div>Mon</div>
+          <div>Tue</div>
+          <div>Wed</div>
+          <div>Thu</div>
+          <div>Fri</div>
+          <div>Sat</div>
+        </div>
+        <div class="calendar" id="calendar"></div>
+      </div>
+      <div class="events-section-items" id="eventsSection">
+        <div class="events-title-box">
+          <span class="ing-event">Ongoing Events</span>
+          <span class="end-event">Finished Events</span>
+        </div>
+        <div class="event-big-box">
+          <p id="defaultMessage">
+            <i class="bi bi-calendar-event"></i><br>
+            Please select a date from the calendar.<br>
+          <em>We'll show you the events scheduled on the selected date.</em></p>
+          <div id="eventCards" style="display: none;">
+            <div class="event-section-item">
+            <div class="event-card">
+              <div class="card-img">
+                <img src="../images/event-content01.png" alt="">
+                <span>Ongoing</span>
+              </div>
+              <div class="card-content">
+                <div class="card-content-title">
+                  <h2>Ghibli 3D Sculptures Exhibition</h2> 
+                  <span>#HotAirFromAcrossTheSea</span>
+                  <span>#ReservationRequired</span>
+                </div>
+                <span>May 27, 2025 (Tue) - Sep 23, 2025 (Tue)</span><br>
+                <span>Warehouse TERRADA B&C HALL</span>
+                <p>
+                  Studio Ghibli's films, including “The Boy and the Heron,” which has been released in over 80 countries and regions, are now being watched worldwide. Behind them are people who have dedicated years to sharing their love of Ghibli’s work. This exhibition traces how overseas partners delivered these works and showcases famous scenes as 3D sculptures. It started back in 2003 and returns to Tokyo after 22 years with evolved displays. You can even see the Savoya S-21 flying boat from “Porco Rosso”! Ready to dive into the Ghibli world?
+                </p>
+                <button class="show-btn">Overview</button>
+                <button class="site-btn">Website</button>
+              </div> 
+            </div>
+            <div class="event-card">
+              <div class="card-img">
+                <img src="../images/event-content02.png" alt="">
+                <span>Ongoing</span>
+              </div>
+              <div class="card-content">
+                <div class="card-content-title">
+                  <h2>Suzuki and Ghibli Exhibition</h2> 
+                  <span>#NiceToSeeYouAgain</span>
+                  <span>#ReservationRequired</span>
+                </div>
+                <span>Apr 25, 2025 (Fri) - Jun 29, 2025 (Sun)</span><br>
+                <span>Nagano Prefectural Art Museum</span>
+                <p>
+                  "Toshio Suzuki Through Books"  
+                With Takahata Isao and Hayao Miyazaki, producer Toshio Suzuki brought many globally beloved Ghibli films to life. This exhibition focuses on the books Suzuki has read and the eras he lived through, from postwar Nagoya to the Showa, Heisei, and Reiwa eras. Dive into how history, nonfiction, and critical literature shaped his mind and how he channeled that into becoming a legendary editor and producer who defined Studio Ghibli.
+                </p>
+                <button class="show-btn">Overview</button>
+                <button class="site-btn">Website</button>
+              </div> 
+            </div>
+            <div class="event-card">
+              <div class="card-img">
+                <img src="../images/event-content03.png" alt="">
+                <span>Ongoing</span>
+              </div>
+              <div class="card-content">
+                <div class="card-content-title">
+                  <h2>Friday Roadshow and Ghibli</h2> 
+                  <span>#WatchTogether</span>
+                  <span>#ReservationRequired</span>
+                </div>
+                <span>Apr 27, 2025 (Thu) - Jul 6, 2025 (Sun)</span><br>
+                <span>Nagasaki Art Museum</span>
+                <p>
+                  A special exhibition that retraces the history of Japan’s “Friday Roadshow” TV movie program while highlighting the charm of Studio Ghibli’s films. Since airing “Nausicaä of the Valley of the Wind” in 1986, the show has broadcast Ghibli works over 200 times! This exhibition not only revisits the memories and records of those times, but also lets you rediscover the timeless appeal of Ghibli films across Showa, Heisei, and Reiwa.
+                </p>
+                <button class="show-btn">Overview</button>
+                <button class="site-btn">Website</button>
+              </div> 
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+    <!-- 날씨 위젯 -->
+    <div class="weather-widget">
+      <!-- Mini Widget -->
+      <div class="weather-mini" id="weatherMini" onclick="showDetail()">
+        <p>Today's Weather</p>
+        <img src="https://openweathermap.org/img/wn/01d@2x.png" alt="Weather Icon" />
+        <strong>--℃</strong>
+        <p>Loading...</p>
+      </div>
+    
+      <!-- Detailed Widget -->
+      <div class="weather-detail" id="weatherDetail">
+        <div class="weather-header">
+          <span>----</span>
+          <strong>Weather in Tokyo</strong>
+          <span>📍---</span>
+          <div class="close-btn" onclick="hideDetail()">✕</div>
+        </div>
+        <div class="weather-body">
+          <img src="https://openweathermap.org/img/wn/01d@2x.png" alt="Weather Icon" />
+          <p><strong>High: --℃</strong> <strong>Low: --℃</strong></p>
+          <p>Weather description loading...</p>
+          <p>No wind speed information</p>
+          <hr />
+          <div class="weekly-forecast">
+            <div>🌤️<br/>Mon</div>
+            <div>⛅<br/>Tue</div>
+            <div>⛅<br/>Wed</div>
+            <div>☀️<br/>Thu</div>
+            <div>☁️<br/>Fri</div>
+            <div>☁️<br/>Sat</div>
+            <div>☀️<br/>Sun</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="event-modal">
+    <div class="modal-wrap">
+      <button class="close-btn-modal">
+        <i class="bi bi-x-lg"></i>
+      </button>
+      <div class="modal-inner">
+          <!-- Swiper -->
+        <div class="swiper event-modal-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="event-card-modal">
+                <div class="card-img-modal">
+                  <img src="../images/event-content01.png" alt="">
+                  <span>Ongoing</span>
+                </div>
+                <div class="card-content-modal">
+                  <div class="card-content-title-modal">
+                    <h2>Studio Ghibli's 3D Exhibits</h2> 
+                  </div>
+                  <span>May 27, 2025 (Tue) - September 23, 2025 (Tue)</span><br>
+                  <span>Warehouse TERRADA B&C HALL</span>
+                  <p>
+                    Studio Ghibli films, including *The Boy and the Heron*, have been released in over 80 countries and regions around the world. Behind these films are passionate individuals who devoted themselves to sharing Ghibli’s magic. This exhibit traces how overseas partners brought Ghibli works to life, featuring famous film scenes recreated as 3D sculptures.  
+                  First launched in 2003, this exhibit is the origin of major Ghibli exhibitions and now returns to Tokyo after 22 years with an upgrade. Don’t miss the appearance of the Savoia S-21 seaplane from *Porco Rosso*! Dive into the world of Ghibli!
+                </p>
+                  </p>
+                  <button class="show-btn-modal">Details</button>
+                  <button class="site-btn-modal">Website</button>
+                </div> 
+              </div>
+            </div>
+            <div class="swiper-slide">
+                            <div class="event-card-modal">
+                <div class="card-img-modal">
+                  <img src="../images/event-content02.png" alt="">
+                  <span>Ongoing</span>
+                </div>
+                <div class="card-content-modal">
+                  <div class="card-content-title-modal">
+                    <h2>Toshio Suzuki and Ghibli Exhibition</h2> 
+                  </div>
+                  <span>April 25, 2025 (Fri) - June 29, 2025 (Sun)</span><br>
+                  <span>Nagano Art Museum</span>
+                  <p>
+                    *Toshio Suzuki Through Books*  
+                  Toshio Suzuki, the producer who worked alongside Isao Takahata and Hayao Miyazaki to bring Ghibli’s legendary films to life, is in the spotlight.  
+                  This exhibition focuses on the books Suzuki read growing up in postwar Nagoya through the Showa, Heisei, and Reiwa eras. Through history books, nonfiction, and critiques he has read with sincere curiosity, we’ll explore how these shaped his thinking and creative process. Learn how he became a key figure in Ghibli as a producer and editor.
+                </p>
+                  </p>
+                  <button class="show-btn-modal">Details</button>
+                  <button class="site-btn-modal">Website</button>
+                </div> 
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="event-card-modal">
+                <div class="card-img-modal">
+                  <img src="../images/event-content03.png" alt="">
+                  <span>Ongoing</span>
+                </div>
+                <div class="card-content-modal">
+                  <div class="card-content-title-modal">
+                    <h2>Friday Road Show and Ghibli</h2> 
+                  </div>
+                  <span>April 27, 2025 (Thu) - July 6, 2025 (Sun)</span><br>
+                  <span>Nagasaki Art Museum</span>
+                  <p>
+                    This exhibit looks back on the history of the Japanese TV program *Friday Road Show*, while celebrating the charm of Studio Ghibli films.  
+                  Since its debut in 1985, the show aired *Nausicaä of the Valley of the Wind* in 1986 and has since broadcast over 200 Ghibli titles.  
+                  Discover how this program helped Ghibli build its reputation and legacy through nostalgic memories and archives from the Showa, Heisei, and Reiwa eras.
+                  </p>
+                  <button class="show-btn-modal">전시 개요</button>
+                  <button class="site-btn-modal">공식 사이트</button>
+                </div> 
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-content">
+          → Swipe to explore the next event
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!---------------- footer ---------------->
+  <div class="footer-include"></div>
+
+  <!---------------- aos ---------------->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+
+  <!---------------- swiper ---------------->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+
+  <!---------------- js ---------------->
+  <!-- js 연결해주세요... -->
+  <script src="../js/text-animation.js"></script>
+
+</body>
+</html>

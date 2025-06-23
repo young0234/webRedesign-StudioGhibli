@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+  <title>スタジオジブリ</title>
+
+  <!---------------- favicon ---------------->
+  <link rel="icon" href="images/favicon.png">
+
+  <!---------------- aos ---------------->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!---------------- swiper ---------------->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!---------------- bootstrap icons ---------------->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+
+  <!---------------- style ---------------->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive-mobile.css">
+
+</head>
+
+<body>
+  <!---------------- music ---------------->
+  <div class="music-wrap">
+    <!-- overlay -->
+    <div class="music-overlay"></div>
+    <!-- background -->
+    <div class="music-background">
+      <img src="images/music-background.png" alt="music-background">
+    </div>
+    <!-- content -->
+    <div class="music-content">
+      <div class="music-img">
+        <img src="images/music-load.gif" alt="music-gif">
+      </div>
+      <audio src="images/music-mainpage.mp3" class="music-mainpage" loop></audio>
+      <div class="music-text">
+        <h2 class="ja">このページは音楽が出ます！<br>
+          サウンドONで、お楽しみください ♪</h2>
+        <strong>♪ 人生のメリーゴーランド- (ハウルの動く城) ♪</strong>
+        <button class="musicOn ja"><i class="bi bi-volume-down-fill"></i>ON</button>
+        <button class="musicOff ja"><i class="bi bi-volume-mute-fill"></i>OFF</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-page-music-wrap">
+    <button class="main-page-music-off-btn"><i class="bi bi-volume-mute-fill"></i></button>
+    <button class="main-page-music-on-btn"><i class="bi bi-volume-down-fill"></i></button>
+  </div>
+
+  <!---------------- pagination ---------------->
+  <div class="pagination-container" id="mainPagination">
+    <a href="#main-section" class="pagination-item active" data-page="1"></a>
+    <a href="#notice-section" class="pagination-item" data-page="2"></a>
+    <a href="#event-section" class="pagination-item" data-page="3"></a>
+    <a href="#movie-section" class="pagination-item" data-page="4"></a>
+    <a href="#inside-section" class="pagination-item" data-page="5"></a>
+    <a href="#map-section" class="pagination-item" data-page="6"></a>
+    <a href="#email-section" class="pagination-item" data-page="7"></a>
+  </div>
+
+  <!---------------- header ---------------->
+  <div class="header-include"></div>
+
+  <!---------------- section: ghibli-main-logo ---------------->
+  <section class="ghibli-main-logo">
+    <ul>
+      <li><img src="images/title01.png" alt="ghibli-logo-character"></li>
+      <li><img src="images/title02.png" alt="ghibli-logo-character"></li>
+      <li><img src="images/title03.png" alt="ghibli-logo-character"></li>
+      <li><img src="images/title04.png" alt="ghibli-logo-character"></li>
+      <li><img src="images/title05.png" alt="ghibli-logo-character"></li>
+      <li><img src="images/title06.png" alt="ghibli-logo-character"></li>
+      <li><img src="images/title07.png" alt="ghibli-logo-character"></li>
+    </ul>
+  </section>
+
+  <!---------------- section: ghibli-mainvisual ---------------->
+  <section class="ghibli-mainvisual" id="main-section">
+    <!-- overlay -->
+    <div class="ghibli-mainvisual-overlay"></div>
+    <!-- media: video / image control (JS) -->
+    <div class="ghibli-mainvisual-media">
+      <div class="ghibli-mainvisual-image">
+        <!-- movie01 -->
+        <div class="swiper ghibli-mainvisual-image-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/movie01-img01.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie01-img02.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie01-img03.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie01-img04.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie01-img05.jpg" alt="movie-img">
+            </div>
+          </div>
+        </div>
+        <!-- movie02 -->
+        <div class="swiper ghibli-mainvisual-image-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/movie02-img01.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie02-img02.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie02-img03.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie02-img04.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie02-img05.jpg" alt="movie-img">
+            </div>
+          </div>
+        </div>
+        <!-- movie03 -->
+        <div class="swiper ghibli-mainvisual-image-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/movie03-img01.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie03-img02.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie03-img03.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie03-img04.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie03-img05.jpg" alt="movie-img">
+            </div>
+          </div>
+        </div>
+        <!-- movie04 -->
+        <div class="swiper ghibli-mainvisual-image-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/movie04-img01.jpg" alt="movie-img">
+            </div>
+          </div>
+        </div>
+        <!-- movie05 -->
+        <div class="swiper ghibli-mainvisual-image-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/movie05-img01.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie05-img02.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie05-img03.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie05-img04.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie05-img05.jpg" alt="movie-img">
+            </div>
+          </div>
+        </div>
+        <!-- movie06 -->
+        <div class="swiper ghibli-mainvisual-image-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/movie06-img01.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie06-img02.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie06-img03.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie06-img04.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie06-img05.jpg" alt="movie-img">
+            </div>
+          </div>
+        </div>
+        <!-- movie07 -->
+        <div class="swiper ghibli-mainvisual-image-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/movie07-img01.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie07-img02.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie07-img03.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie07-img04.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie07-img05.jpg" alt="movie-img">
+            </div>
+          </div>
+        </div>
+        <!-- movie08 -->
+        <div class="swiper ghibli-mainvisual-image-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/movie08-img01.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie08-img02.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie08-img03.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie08-img04.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie08-img05.jpg" alt="movie-img">
+            </div>
+          </div>
+        </div>
+        <!-- movie09 -->
+        <div class="swiper ghibli-mainvisual-image-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/movie09-img01.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie09-img02.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie09-img03.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie09-img04.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie09-img05.jpg" alt="movie-img">
+            </div>
+          </div>
+        </div>
+        <!-- movie10 -->
+        <div class="swiper ghibli-mainvisual-image-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/movie10-img01.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie10-img02.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie10-img03.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie10-img04.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie10-img05.jpg" alt="movie-img">
+            </div>
+          </div>
+        </div>
+        <!-- movie11 -->
+        <div class="swiper ghibli-mainvisual-image-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/movie11-img01.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie11-img02.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie11-img03.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie11-img04.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie11-img05.jpg" alt="movie-img">
+            </div>
+          </div>
+        </div>
+        <!-- movie12 -->
+        <div class="swiper ghibli-mainvisual-image-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/movie12-img01.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie12-img02.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie12-img03.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie12-img04.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie12-img05.jpg" alt="movie-img">
+            </div>
+          </div>
+        </div>
+        <!-- movie13 -->
+        <div class="swiper ghibli-mainvisual-image-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/movie13-img01.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie13-img02.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie13-img03.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie13-img04.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie13-img05.jpg" alt="movie-img">
+            </div>
+          </div>
+        </div>
+        <!-- movie14 -->
+        <div class="swiper ghibli-mainvisual-image-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/movie14-img01.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie14-img02.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie14-img03.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie14-img04.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie14-img05.jpg" alt="movie-img">
+            </div>
+          </div>
+        </div>
+        <!-- movie15 -->
+        <div class="swiper ghibli-mainvisual-image-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/movie15-img01.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie15-img02.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie15-img03.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie15-img04.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie15-img05.jpg" alt="movie-img">
+            </div>
+          </div>
+        </div>
+        <!-- movie16 -->
+        <div class="swiper ghibli-mainvisual-image-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/movie16-img01.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie16-img02.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie16-img03.jpg" alt="movie-img">
+            </div>
+          </div>
+        </div>
+        <!-- movie17 -->
+        <div class="swiper ghibli-mainvisual-image-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/movie17-img01.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie17-img02.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie17-img03.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie17-img04.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie17-img05.jpg" alt="movie-img">
+            </div>
+          </div>
+        </div>
+        <!-- movie18 -->
+        <div class="swiper ghibli-mainvisual-image-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/movie18-img01.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie18-img02.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie18-img03.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie18-img04.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie18-img05.jpg" alt="movie-img">
+            </div>
+          </div>
+        </div>
+        <!-- movie19 -->
+        <div class="swiper ghibli-mainvisual-image-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/movie19-img01.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie19-img02.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie19-img03.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie19-img04.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie19-img05.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie19-img06.jpg" alt="movie-img">
+            </div>
+          </div>
+        </div>
+        <!-- movie20 -->
+        <div class="swiper ghibli-mainvisual-image-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/movie20-img01.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie20-img02.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie20-img03.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie20-img04.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie20-img05.jpg" alt="movie-img">
+            </div>
+          </div>
+        </div>
+        <!-- movie21 -->
+        <div class="swiper ghibli-mainvisual-image-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/movie21-img01.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie21-img02.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie21-img03.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie21-img04.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie21-img05.jpg" alt="movie-img">
+            </div>
+          </div>
+        </div>
+        <!-- movie22 -->
+        <div class="swiper ghibli-mainvisual-image-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/movie22-img01.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie22-img02.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie22-img03.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie22-img04.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie22-img05.jpg" alt="movie-img">
+            </div>
+          </div>
+        </div>
+        <!-- movie23 -->
+        <div class="swiper ghibli-mainvisual-image-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/movie23-img01.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie23-img02.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie23-img03.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie23-img04.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie23-img05.jpg" alt="movie-img">
+            </div>
+          </div>
+        </div>
+        <!-- movie24 -->
+        <div class="swiper ghibli-mainvisual-image-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/movie24-img01.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie24-img02.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie24-img03.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie24-img04.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie24-img05.jpg" alt="movie-img">
+            </div>
+          </div>
+        </div>
+        <!-- movie25 -->
+        <div class="swiper ghibli-mainvisual-image-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/movie25-img01.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie25-img02.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie25-img03.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie25-img04.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie25-img05.jpg" alt="movie-img">
+            </div>
+          </div>
+        </div>
+        <!-- movie26 -->
+        <div class="swiper ghibli-mainvisual-image-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/movie26-img01.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie26-img02.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie26-img03.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie26-img04.jpg" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie26-img05.jpg" alt="movie-img">
+            </div>
+          </div>
+        </div>
+        <!-- movie27 -->
+        <div class="swiper ghibli-mainvisual-image-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/movie27-img20.png" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie27-img08.png" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie27-img12.png" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie27-img23.png" alt="movie-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/movie27-img32.png" alt="movie-img">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ghibli-mainvisual-video">
+        <video src="images/studio_ghibli.MOV" muted autoplay loop></video>
+      </div>
+    </div>
+    <!-- catchphrase -->
+    <div class="ghibli-catchphrase">
+      <h1 class="ja">この世には見えない<br>魔法の輪がある</h1>
+    </div>
+    <!-- about -->
+    <div class="ghibli-about">
+      <div class="ghibli-about-inner">
+        <div class="ghibli-about-left-text">
+          <div class="main-title">
+            <h2 class="ja">スタジオジブリ</h2>
+            <a href="pages_jp/ghibli-data_jp.html" class="more-btn">
+              <span class="ja">もっと見る</span>
+            </a>
+          </div>
+          <div class="ghibli-about-content-box">
+            <p class="ghibli-about-text">
+              <b>ジブリ</b>
+              はサハラ砂漠の吹く熱風を意味するイタリア語、‘ghibli’が由来です。「日本のアニメーション界に熱風を起こそう」という思いを込めたネーミングだそうです。この名のようにジブリは、商業性と慣行に絡まなく、人間の内面と生の本質を真面目に描くながら自分自身の道を歩いていました。何が人気があるかよりも、何の話を伝えようか先ほど考える態度は、今からジブリを特別になる力です。
+            </p>
+            <span class="ghibli-about-click-desc">
+              作品をクリック！
+            </span>
+          </div>
+        </div>
+        <div class="ghibli-about-right-history">
+          <ul class="ghibli-about-history">
+            <li>
+              <b>1984</b>
+              <ul>
+                <li>
+                  <button>「風の谷のナウシカ」</button>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <b>1986</b>
+              <ul>
+                <li>
+                  <button>「天空の城ラピュタ」</button>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <b>1988</b>
+              <ul>
+                <li>
+                  <button>「となりのトトロ」</button>
+                </li>
+                <li>
+                  <button>「火垂るの墓」</button>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <b>1989</b>
+              <ul>
+                <li>
+                  <button>「魔女の宅急便」</button>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <b>1991</b>
+              <ul>
+                <li>
+                  <button>「おもひでぽろぽろ」</button>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <b>1992</b>
+              <ul>
+                <li>
+                  <button>「紅の豚」</button>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <b>1993</b>
+              <ul>
+                <li>
+                  <button>「海がきこえる」</button>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <b>1994</b>
+              <ul>
+                <li>
+                  <button>「平成狸合戦ぽんぽこ」</button>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <b>1995</b>
+              <ul>
+                <li>
+                  <button>「耳をすませば」</button>
+                </li>
+                <li>
+                  <button>「On Your Mark」</button>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <b>1997</b>
+              <ul>
+                <li>
+                  <button>「もののけ姫」</button>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <b>1999</b>
+              <ul>
+                <li>
+                  <button>「ホーホケキョ となりの山田くん」</button>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <b>2001</b>
+              <ul>
+                <li>
+                  <button>「千と千尋の神隠し」</button>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <b>2002</b>
+              <ul>
+                <li>
+                  <button>「猫の恩返し」</button>
+                </li>
+                <li>
+                  <button>「ギブリーズ episode2」</button>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <b>2004</b>
+              <ul>
+                <li>
+                  <button>「ハウルの動く城」</button>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <b>2006</b>
+              <ul>
+                <li>
+                  <button>「ゲド戦記」</button>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <b>2008</b>
+              <ul>
+                <li>
+                  <button>「崖の上のポニョ」</button>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <b>2010</b>
+              <ul>
+                <li>
+                  <button>「借りぐらしのアリエッティ」</button>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <b>2011</b>
+              <ul>
+                <li>
+                  <button>「コクリコ坂から」</button>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <b>2013</b>
+              <ul>
+                <li>
+                  <button>「風立ちぬ」</button>
+                </li>
+                <li>
+                  <button>「かぐや姫の物語」</button>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <b>2014</b>
+              <ul>
+                <li>
+                  <button>「思い出のマーニー」</button>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <b>2016</b>
+              <ul>
+                <li>
+                  <button>「レッドタートル ある島の物語」</button>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <b>2020</b>
+              <ul>
+                <li>
+                  <button>「アーヤと魔女」</button>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <b>2023</b>
+              <ul>
+                <li>
+                  <button>「君たちはどう生きるか」</button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!---------------- section.notice ---------------->
+  <section class="notice" id="notice-section">
+    <div class="notice-inner">
+      <div class="main-title">
+        <h2 class="ja">
+          <img src="images/news-dotori01.png" alt="news-icon" class="dotori" />
+          ジブリ便り
+          <img src="images/news-dotori02.png" alt="news-icon" class="dotori" />
+        </h2>
+        <p>スタジオジブリの最新ニュース</p>
+        <a href="pages_jp/ghibli-news_jp.html" class="more-btn">
+          <span class="ja">もっと見る</span>
+        </a>
+      </div>
+      <div class="notice-content">
+        <div class="notice-img" data-aos="fade-right">
+          <img src="images/news-content02.png" alt="">
+          <div class="img-content">
+            <span>2025.04.18.</span>
+            <h5>
+              ５月２日『君たちはどう生きるか』初放送の直前に、特別番組の放送が決定しました
+            </h5>
+            <p>
+              宮﨑駿監督の10年ぶりの劇場公開作となったスタジオジブリ最新作『君たちはどう生きるか』が、ついに５月２日よる９時からの金曜ロードショーで初放送！　それに先駆け、よる８時２分から特別番組を放送することも決定しました！
+            </p>
+          </div>
+        </div>
+        <ul class="notice-list" data-aos="fade-left">
+          <li>
+            <div class="list-content">
+              <h5>「編集部発　ジブリだより」2025年5月号</h5>
+              <span>2025. 05. 09.</span>
+            </div>
+            <span>
+              今月も前回に引き続き「編集部発 ジブリだより」とさせて頂きます、よろしくお願いします。さて、今年2025年は高畑勲監督生誕90年になります。そして同時に2025年は高畑監督の人生や考え方、作品作りなどに大きな影響を与えた太平洋戦争の終戦から80年が経過する年でもあります。前号でもこの欄で告知しましたが、右記の二つを受け、東京の麻布台ヒルズギャラリーにて、6月27日から9月15日まで「高畑勲展│日本のアニメーションを作った男。」が開催されます。「火垂るの墓」に着目した展示も予定しており、高畑監督のスタジオジブリで活動する以前の作品で培った技術や思想、そしてスタジオジブリで監督が手掛けた作品の数々を改めて見返す機会になることと思います。さらなる詳細はHP等で5月公開予定です、もうしばらくお待ちください。
+            </span>
+          </li>
+          <li>
+            <div class="list-content">
+              <h5>
+                5月2日「君たちはどう生きるか」テレビ初放送が決定しました！　そして5月9日は「紅の豚」。 ２週連続スタジオジブリ作品が放送されます
+              </h5>
+              <span>2025. 04. 11. </span>
+            </div>
+            <span>
+              作品名: 「君たちはどう生きるか」（テレビ初放送）日　時： 2025年5月2日(金)　21:00－23:39※ (日本テレビ系列)◆脚本・監督：宮﨑駿◆音楽：久石譲◆声の出演：山時聡真、菅田将暉、木村拓哉、木村佳乃、柴咲コウ、あいみょん、滝沢カレン、大竹しのぶ、竹下景子、風吹ジュン、阿川佐和子、国村隼、小林薫、火野正平 ほか
+            </span>
+          </li>
+          <li>
+            <div class="list-content">
+              <h5>「編集部発　ジブリだより」2025年4月号</h5>
+              <span>2025. 04. 10.</span>
+            </div>
+            <span>
+              タイトルを見て「？」と思った読者のみなさん、〝野中くん〞が都合により今月はお休みなので、今回臨時で「編集部発 ジブリだより」とさせて頂きます。4月から新年度が始まりましたが、前年度のジブリは「君たちはどう生きるか」の展開が国内から海外へとスイッチした年でした。ご存じのように、ゴールデン・グローブ賞、英国アカデミー賞、米国アカデミー賞を始めとして、海外でも数多くの評価を頂戴したのはありがたいことです。今後の「君たち」情報についてもぜひご期待を。
+            </span>
+          </li>
+          <li>
+            <div class="list-content">
+              <h5>新作短編アニメーション作品のための背景美術スタッフ募集</h5>
+              <span>2025. 03. 28.</span>
+            </div>
+            <span>
+              4月24日（木）をもって、募集は終了いたしました。たくさんのご応募、ありがとうございました。株式会社スタジオジブリでは、新作短編アニメーション作品の背景美術スタッフを募集します。下記の要項をご覧になりご応募ください。募集要項募集職種	背景美術スタッフ募集人数	若干名応募資格	2025年4月30日時点で日本国内に在住の方。制作に必要な十分な日本語力があること。
+              アニメーション背景美術作業の経験がある方優遇。
+              Photoshopによる作業経験がある方優遇。
+            </span>
+          </li>
+        </ul>
+      </div>
+      <img src="images/news-dotori03.png" alt="news-icon">
+    </div>
+  </section>
+
+  <!---------------- section: event ---------------->
+  <section class="event" id="event-section">
+    <div class="event-inner">
+      <div class="main-title">
+        <h2 class="ja">ジブリイベント</h2>
+        <p>スタジオジブリの世界観を期間限定に会える機会！</p>
+          <a href="pages_jp/ghibi-event_jp.html" class="more-btn">
+            <span class="ja">もっと見る</span>
+          </a>
+      </div>
+      <div class="event-container">
+        <div class="event-ticket-wrap">
+          <!-- Swiper -->
+            <div class="swiper event-ticket-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide" data-slide="slide1">
+                  <div class="event-ticket-img">
+                    <img src="images/event-content03.png" alt="ghibli-event-img">
+                  </div>
+                  <div class="event-ticket-info">
+                    <div class="event-ticket-container">
+                      <div class="event-ticket-info-title">
+                        <strong>金曜ロードショーとジブリ展</strong>
+                      </div>
+                      <div class="event-ticket-info-btn">
+                        <a href="#none">予約</a>
+                      </div>
+                    </div>
+                    <div class="event-ticket-content">
+                      <span>2025.04.24 - 2025.06.29</span><br>
+                      <span>長崎県美術館</span>
+                      <p>日本テレビ系の映画番組「金曜ロードショー」のヒストリーを辿りながら、スタジオジブリ作品の魅力を紹介する展覧会を開催します。<br>1985年に始まった「金曜ロードショー」は、翌86年に「風の谷のナウシカ」（84年、宮﨑駿監督）を初放映*して以来、これまで200回以上にわたってスタジオジブリ作品を放映してきました。その歴史はスタジオジブリが人気を確立し、作品の評価を不動のものとしていく足跡と共にあり、現在も続いています。<br>本展では、放送された時代ごとの記憶と記録を通じて映画の魅力に迫るほか、昭和から平成、令和に至る世相を掘り起こすことで、スタジオジブリ作品が持つ時代性と普遍性を浮かび上がらせます。</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide" data-slide="slide2">
+                  <div class="event-ticket-img">
+                    <img src="images/event-content01.png" alt="ghibli-event-img">
+                  </div>
+                  <div class="event-ticket-info">
+                    <div class="event-ticket-container">
+                      <div class="event-ticket-info-title">
+                        <strong>ジブリの立体造型物展</strong>
+                      </div>
+                      <div class="event-ticket-info-btn">
+                        <a href="#none">予約</a>
+                      </div>
+                    </div>
+                    <div class="event-ticket-content">
+                      <span>2025.05.27. - 2025.09.23.</span><br>
+                      <span>Warehouse TERRADA B&C HALL </span>
+                      <p>80を超える国や地域で公開された映画『君たちはどう生きるか』をはじめ、スタジオジブリ作品は今、世界中で観られています。<br>その背景には、作品を愛し、長い時間をかけて届けようとしてくれた人々がそれぞれの国や地域にいました。<br>本展は海外のパートナーがどのように作品を届けていったのかを辿りながら、映画の名場面を立体造型物で紹介していきます。<br>立体造型物展は2003年に始まった本格的なスタジオジブリ展の原点であり、進化を遂げて22年ぶりに東京に帰ってきます。<br>『紅の豚』に登場する飛行艇サボイアS-21も登場！</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide" data-slide="slide3">
+                  <div class="event-ticket-img">
+                    <img src="images/event-content04.png" alt="ghibli-event-img">
+                  </div>
+                  <div class="event-ticket-info">
+                    <div class="event-ticket-container">
+                      <div class="event-ticket-info-title">
+                        <strong>高畑 勲展</strong>
+                      </div>
+                      <div class="event-ticket-info-btn soon">
+                        <a href="#none">予定</a>
+                      </div>
+                    </div>
+                    <div class="event-ticket-content">
+                      <span>2025.06.27. - 2025.09.15.</span><br>
+                      <span>Azabudai Hills Gallery</span>
+                      <p>2025年が高畑勲の生誕90 年という節目であること、また、2025年は高畑がその人生に大きな影響を受けた太平洋戦争の終戦から80 年が経過する年であり、この二つを受け本年夏の開催が決定。「火垂るの墓」に着目した展示も予定しています。<br>また、監督・プロデューサーとして活躍する庵野秀明が、かつて「火垂るの墓」に原画スタッフとして参加して描いた重巡洋艦摩耶のレイアウトが発見されました。 それを基にして描かれたハーモニーセル（※）とともに本展覧会で初公開されます。</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide" data-slide="slide3">
+                  <div class="event-ticket-img">
+                    <img src="images/event-content02.png" alt="ghibli-event-img">
+                  </div>
+                  <div class="event-ticket-info">
+                    <div class="event-ticket-container">
+                      <div class="event-ticket-info-title">
+                        <strong>鈴木敏夫とジブリ展</strong>
+                      </div>
+                      <div class="event-ticket-info-btn">
+                        <a href="#none">予約</a>
+                      </div>
+                    </div>
+                    <div class="event-ticket-content">
+                      <span>2025.04.25~2025.06.29</span><br>
+                      <span>長野県立美術館</span>
+                      <p>《書籍で紐解く鈴木敏夫》<br>高畑勲・宮﨑駿両監督と共に、世界を代表する数々のアニメーション映画を世に送り出してきたスタジオジブリ・プロデューサーの鈴木敏夫。<br>展示では、戦後の名古屋で育ち、昭和から平成、令和の時代を駆け続けている鈴木が「読んできた本」と「その時代背景」に注目します。<br>子供時代から読んできた漫画や小説、青春時代を経て、社会に出てから今もなお旺盛な好奇心で読み続けている歴史本やノンフィクション、評論本などを通し、鈴木がその作品や作家からどんな影響を受け、自身の思考術へとつなげていったのか、そしてどのように作り手と向き合い、編集者、プロデューサーとしてスタジオジブリ映画を確立していったのか。
+</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next">
+              <i class="bi bi-chevron-right"></i>
+            </div>
+            <div class="swiper-button-prev">
+              <i class="bi bi-chevron-left"></i>
+            </div>
+        </div>
+        <div class="event-calendar-wrap">
+          <div class="event-calendar-inner">
+            <a href="" class="event-calender-titile">2025年 5月</a>
+            <p>スクロールして<br>イベントを確認してください！</p>
+            <div class="event-calnder-content">
+              <a href="" class="event-calnder-date" data-target="slide1"><span>1日</span><span> 木曜日</span></a>
+              <a href="" class="event-calnder-date" data-target="slide2"><span>2日</span><span> 金曜日</span></a>
+              <a href="" class="event-calnder-date" data-target="slide3"><span>3日</span><span> 土曜日</span></a>
+              <a href="" class="event-calnder-date" data-target="slide4"><span>4日</span><span> 日曜日</span></a>
+              <a href="" class="event-calnder-date" data-target="slide1"><span>5日</span><span> 月曜日</span></a>
+              <a href="" class="event-calnder-date" data-target="slide2"><span>6日</span><span> 火曜日</span></a>
+              <a href="" class="event-calnder-date" data-target="slide3"><span>7日</span><span> 水曜日</span></a>
+              <a href="" class="event-calnder-date" data-target="slide4"><span>8日</span><span> 木曜日</span></a>
+              <a href="" class="event-calnder-date" data-target="slide1"><span>9日</span><span> 金曜日</span></a>
+              <a href="" class="event-calnder-date" data-target="slide2"><span>10日</span><span> 土曜日</span></a>
+              <a href="" class="event-calnder-date" data-target="slide3"><span>11日</span><span> 日曜日</span></a>
+              <a href="" class="event-calnder-date" data-target="slide4"><span>12日</span><span> 月曜日</span></a>
+              <a href="" class="event-calnder-date" data-target="slide1"><span>13日</span><span> 火曜日</span></a>
+              <a href="" class="event-calnder-date" data-target="slide2"><span>14日</span><span> 水曜日</span></a>
+              <a href="" class="event-calnder-date" data-target="slide3"><span>15日</span><span> 木曜日</span></a>
+              <a href="" class="event-calnder-date" data-target="slide4"><span>16日</span><span> 金曜日</span></a>
+              <a href="" class="event-calnder-date" data-target="slide1"><span>17日</span><span> 土曜日</span></a>
+              <a href="" class="event-calnder-date" data-target="slide2"><span>18日</span><span> 日曜日</span></a>
+              <a href="" class="event-calnder-date" data-target="slide3"><span>19日</span><span> 月曜日</span></a>
+              <a href="" class="event-calnder-date" data-target="slide4"><span>20日</span><span> 火曜日</span></a>
+              <a href="" class="event-calnder-date" data-target="slide1"><span>21日</span><span> 水曜日</span></a>
+              <a href="" class="event-calnder-date" data-target="slide2"><span>22日</span><span> 木曜日</span></a>
+              <a href="" class="event-calnder-date" data-target="slide3"><span>23日</span><span> 金曜日</span></a>
+              <a href="" class="event-calnder-date" data-target="slide4"><span>24日</span><span> 土曜日</span></a>
+              <a href="" class="event-calnder-date" data-target="slide1"><span>25日</span><span> 日曜日</span></a>
+              <a href="" class="event-calnder-date" data-target="slide2"><span>26日</span><span> 月曜日</span></a>
+              <a href="" class="event-calnder-date" data-target="slide3"><span>27日</span><span> 火曜日</span></a>
+              <a href="" class="event-calnder-date" data-target="slide4"><span>28日</span><span> 水曜日</span></a>
+              <a href="" class="event-calnder-date" data-target="slide1"><span>29日</span><span> 木曜日</span></a>
+              <a href="" class="event-calnder-date" data-target="slide2"><span>30日</span><span> 金曜日</span></a>
+              <a href="" class="event-calnder-date" data-target="slide3"><span>31日</span><span> 土曜日</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!---------------- section: movie-film ---------------->
+  <section class="movie-film" id="movie-section">
+    <div class="movie-film-inner">
+      <!--  title -->
+      <div class="main-title">
+        <h2 class="ja">ジブリ作品見回り</h2>
+        <p>スタジオジブリ作品の中で行く旅行</p>
+        <a href="pages_jp/movie-list_jp.html" class="more-btn">
+          <span class="ja">もっと見る</span>
+        </a>
+      </div>
+      <!-- content swiper -->
+      <div class="swiper movie-film-swiper">
+        <div class="swiper-wrapper">
+          <!-- slide movie 01 -->
+          <div class="swiper-slide">
+            <a href="#none">
+              <img src="images/movie-poster-jp01.png" alt="movie-poster-img">
+              <div class="movie-trailer-youtube" data-video-id="iuCmfUs4fA8"></div>
+            </a>
+          </div>
+          <!-- slide movie 02 -->
+          <div class="swiper-slide">
+            <a href="#none">
+              <img src="images/movie-poster-jp02.png" alt="movie-poster-img">
+              <div class="movie-trailer-youtube" data-video-id="1RdPmfFqa3I"></div>
+            </a>
+          </div>
+          <!-- slide movie 03 -->
+          <div class="swiper-slide">
+            <a href="#none">
+              <img src="images/movie-poster-jp03.png" alt="movie-poster-img">
+              <div class="movie-trailer-youtube" data-video-id="92a7Hj0ijLs"></div>
+            </a>
+          </div>
+          <!-- slide movie 04 -->
+          <div class="swiper-slide">
+            <a href="#none">
+              <img src="images/movie-poster-jp04.png" alt="movie-poster-img">
+              <div class="movie-trailer-youtube" data-video-id="4vPeTSRd580"></div>
+            </a>
+          </div>
+          <!-- slide movie 05 -->
+          <div class="swiper-slide">
+            <a href="#none">
+              <img src="images/movie-poster-jp05.png" alt="movie-poster-img">
+              <div class="movie-trailer-youtube" data-video-id="4bG17OYs-GA"></div>
+            </a>
+          </div>
+          <!-- slide movie 06 -->
+          <div class="swiper-slide">
+            <a href="#none">
+              <img src="images/movie-poster-jp06.png" alt="movie-poster-img">
+              <div class="movie-trailer-youtube" data-video-id="iyI2AFL1Tss"></div>
+            </a>
+          </div>
+          <!-- slide movie 07 -->
+          <div class="swiper-slide">
+            <a href="#none">
+              <img src="images/movie-poster-jp07.png" alt="movie-poster-img">
+              <div class="movie-trailer-youtube" data-video-id="EEutDrummXo"></div>
+            </a>
+          </div>
+          <!-- slide movie 08 -->
+          <div class="swiper-slide">
+            <a href="#none">
+              <img src="images/movie-poster-jp08.png" alt="movie-poster-img">
+              <div class="movie-trailer-youtube" data-video-id="tfkHiHjrqa8"></div>
+            </a>
+          </div>
+          <!-- slide movie 09 -->
+          <div class="swiper-slide">
+            <a href="#none">
+              <img src="images/movie-poster-jp09.png" alt="movie-poster-img">
+              <div class="movie-trailer-youtube" data-video-id="guUCCpeFcuk"></div>
+            </a>
+          </div>
+          <!-- slide movie 10 -->
+          <div class="swiper-slide">
+            <a href="#none">
+              <img src="images/movie-poster-jp10.png" alt="movie-poster-img">
+              <div class="movie-trailer-youtube" data-video-id="DULtDcv7QmY"></div>
+            </a>
+          </div>
+          <!-- slide movie 11 -->
+          <div class="swiper-slide">
+            <a href="#none">
+              <img src="images/movie-poster-jp11.png" alt="movie-poster-img">
+              <div class="movie-trailer-youtube" data-video-id="v=6KXl7F5GSso"></div>
+            </a>
+          </div>
+          <!-- slide movie 12 -->
+          <div class="swiper-slide">
+            <a href="#none">
+              <img src="images/movie-poster-jp12.png" alt="movie-poster-img">
+              <div class="movie-trailer-youtube" data-video-id="5iet4AxBK1U"></div>
+            </a>
+          </div>
+          <!-- slide movie 13 -->
+          <div class="swiper-slide">
+            <a href="#none">
+              <img src="images/movie-poster-jp13.png" alt="movie-poster-img">
+              <div class="movie-trailer-youtube" data-video-id="wmqXFTxQPwA"></div>
+            </a>
+          </div>
+          <!-- slide movie 14 -->
+          <div class="swiper-slide">
+            <a href="#none">
+              <img src="images/movie-poster-jp14.png" alt="movie-poster-img">
+              <div class="movie-trailer-youtube" data-video-id="ByXuk9QqQkk"></div>
+            </a>
+          </div>
+          <!-- slide movie 15 -->
+          <div class="swiper-slide">
+            <a href="#none">
+              <img src="images/movie-poster-jp15.png" alt="movie-poster-img">
+              <div class="movie-trailer-youtube" data-video-id="2JVas8usn6o"></div>
+            </a>
+          </div>
+          <!-- slide movie 16 -->
+          <div class="swiper-slide">
+            <a href="#none">
+              <img src="images/movie-poster-jp16.png" alt="movie-poster-img">
+              <div class="movie-trailer-youtube" data-video-id="4WERASeT4vc"></div>
+            </a>
+          </div>
+          <!-- slide movie 17 -->
+          <div class="swiper-slide">
+            <a href="#none">
+              <img src="images/movie-poster-jp17.png" alt="movie-poster-img">
+              <div class="movie-trailer-youtube" data-video-id="yUZCo0oWt4o"></div>
+            </a>
+          </div>
+          <!-- slide movie 18 -->
+          <div class="swiper-slide">
+            <a href="#none">
+              <img src="images/movie-poster-jp18.png" alt="movie-poster-img">
+              <div class="movie-trailer-youtube" data-video-id="-zfglrUnIuk"></div>
+            </a>
+          </div>
+          <!-- slide movie 19 -->
+          <div class="swiper-slide">
+            <a href="#none">
+              <img src="images/movie-poster-jp19.png" alt="movie-poster-img">
+              <div class="movie-trailer-youtube" data-video-id="DaVIv0-Qu4g"></div>
+            </a>
+          </div>
+          <!-- slide movie 20 -->
+          <div class="swiper-slide">
+            <a href="#none">
+              <img src="images/movie-poster-jp20.png" alt="movie-poster-img">
+              <div class="movie-trailer-youtube" data-video-id="QfkrMq2G71g"></div>
+            </a>
+          </div>
+          <!-- slide movie 21 -->
+          <div class="swiper-slide">
+            <a href="#none">
+              <img src="images/movie-poster-jp21.png" alt="movie-poster-img">
+              <div class="movie-trailer-youtube" data-video-id="SACP7brT-mA"></div>
+            </a>
+          </div>
+          <!-- slide movie 22 -->
+          <div class="swiper-slide">
+            <a href="#none">
+              <img src="images/movie-poster-jp22.png" alt="movie-poster-img">
+              <div class="movie-trailer-youtube" data-video-id="Kn9OunFP2jo"></div>
+            </a>
+          </div>
+          <!-- slide movie 23 -->
+          <div class="swiper-slide">
+            <a href="#none">
+              <img src="images/movie-poster-jp23.png" alt="movie-poster-img">
+              <div class="movie-trailer-youtube" data-video-id="WthgveFRs8w"></div>
+            </a>
+          </div>
+          <!-- slide movie 24 -->
+          <div class="swiper-slide">
+            <a href="#none">
+              <img src="images/movie-poster-jp24.jpg" alt="movie-poster-img">
+              <div class="movie-trailer-youtube" data-video-id="WkhWt-pe9I4"></div>
+            </a>
+          </div>
+          <!-- slide movie 25 -->
+          <div class="swiper-slide">
+            <a href="#none">
+              <img src="images/movie-poster-jp25.png" alt="movie-poster-img">
+              <div class="movie-trailer-youtube" data-video-id="y3uYequDQqc"></div>
+            </a>
+          </div>
+          <!-- slide movie 26 -->
+          <div class="swiper-slide">
+            <a href="#none">
+              <img src="images/movie-poster-jp26.png" alt="movie-poster-img">
+              <div class="movie-trailer-youtube" data-video-id="GcFEdZUY1cQ"></div>
+            </a>
+          </div>
+          <!-- slide movie 27 -->
+          <div class="swiper-slide">
+            <a href="#none">
+              <img src="images/movie-poster-jp27.png" alt="movie-poster-img">
+              <div class="movie-trailer-youtube" data-video-id="f7EDFdA10pg"></div>
+            </a>
+          </div>
+        </div>
+        <div class="swiper-button-next"><i class="bi bi-chevron-right"></i></div>
+        <div class="swiper-button-prev"><i class="bi bi-chevron-left"></i></div>
+      </div>
+    </div>
+  </section>
+
+  <!---------------- section.ghibli-inside ---------------->
+  <section class="ghibli-inside" id="inside-section">
+    <div class="ghibli-inside-inner">
+      <div class="main-content">
+        <img id="main-image" src="images/ghibli-inside01.png" alt="Main Image">
+        <div class="content">
+          <div class="main-title">
+            <h2 class="ja">ジブリインサイダー</h2>
+            <a href="pages_jp/ghibli-data_jp.html" class="more-btn">
+              <span class="ja">もっと見る</span>
+            </a>
+          </div>
+          <h5 id="sub-title">１．ジブリの一日　～日常の瞬間～</h5>
+          <p id="description">
+            一つのアニメーションが完成されるまでの過程は、思いより静かく、些少な日常の蓄積。私たちが映画館で会う幻想的な世界と生き生きキャラクターたち、感動を与えられる場面の裏には多くの小さく静かな一日が存在する。スタジオジブリの一日はそのように始める。<br>朝、職員たちは自分の方式に朝を迎える。誰かは自転車を乗り、誰かはコーヒーと一緒に椅子に着席する。モニター前の現画家たちは鉛筆を持って紙の上で一つ目の線を描き、隣席には背景のスケッチがディジタル画面の中に移る。その姿は、まるで歯車のように、精巧な嚙み合って、早くなくても続いている。<br>ジブリの人たちはお互いを「チームメンバー」より、「隣」のように対する。廊下を行き来しながら自然にフィードバックを話し、何か問題があると助言を頼む。コーヒーを飲みながらした対話でインスピレーションが出したり、机の一方の落書きが場面の手掛かりがなることもある。言葉一つ一つが、笑み一つ一つが作品の中一切れになる。
+            
+          </p>
+        </div>
+      </div>
+      <div class="thumbnails">
+        <div class="thumb-wrapper">
+          <img src="images/ghibli-inside01.png" onclick="showContent(0)">
+        </div>
+        <div class="thumb-wrapper">
+          <img src="images/ghibli-inside02.png" onclick="showContent(1)">
+        </div>
+        <div class="thumb-wrapper">
+          <img src="images/ghibli-inside03.png" onclick="showContent(2)">
+        </div>
+        <div class="thumb-wrapper">
+          <img src="images/ghibli-inside04.png" onclick="showContent(3)">
+        </div>
+        <div class="thumb-wrapper">
+          <img src="images/ghibli-inside05.png" onclick="showContent(4)">
+        </div>
+        <div class="thumb-wrapper">
+          <img src="images/ghibli-inside06.png" onclick="showContent(5)">
+        </div>
+      </div>
+      <div id="contents" style="display: none;">
+        <div class="content-item">
+          <img src="images/ghibli-inside01.png">
+          <h5>１．ジブリの一日　～日常の瞬間～</h5>
+          <p>
+            一つのアニメーションが完成されるまでの過程は、思いより静かく、些少な日常の蓄積。私たちが映画館で会う幻想的な世界と生き生きキャラクターたち、感動を与えられる場面の裏には多くの小さく静かな一日が存在する。スタジオジブリの一日はそのように始める。
+            <br>朝、職員たちは自分の方式に朝を迎える。誰かは自転車を乗り、誰かはコーヒーと一緒に椅子に着席する。モニター前の現画家たちは鉛筆を持って紙の上で一つ目の線を描き、隣席には背景のスケッチがディジタル画面の中に移る。その姿は、まるで歯車のように、精巧な嚙み合って、早くなくても続いている。
+            <br>ジブリの人たちはお互いを「チームメンバー」より、「隣」のように対する。廊下を行き来しながら自然にフィードバックを話し、何か問題があると助言を頼む。コーヒーを飲みながらした対話でインスピレーションが出したり、机の一方の落書きが場面の手掛かりがなることもある。言葉一つ一つが、笑み一つ一つが作品の中一切れになる。
+          </p>
+        </div>
+        <div class="content-item">
+          <img src="images/ghibli-inside02.png">
+          <h5>２．職人の指先に先始めるシーン　～原画制作過程～</h5>
+          <p>
+            スタジオジブリのアニメーションは、いつも鉛筆一筆に始まる。華やかなグラフィックも、精巧な3Dレンダリングもない、一枚のスケッチ。机の上、紙の上、その線一つ一つがすぐに一つの生命になって、話になる、そしてそのスタートラインには原画制作者も立っている。
+            <br>原画作業室の空気は静かだ。画面も、音楽も、台詞もない、ただ鉛筆が紙の上を舞う音ばかり空間に存在する。作画家は何十回、時には、何百回にかけて同じ動作を繰り返してキャラクターの動きを描く。首を回す瞬間、風に揺れる髪の毛、感情が滲むまなざし一つ。その全ての要素が一場面の中に自然に流れなければならない。
+            <br>指先の微細な圧力変化、目にはよく見えなくても線の太さの差さえキャラクターの生命力に影響を与える。それで作画家はいつも集中し、中止し、描き替える。線が気に入らなければ、考えなくて消して、もう一つの線を描く。その結果、完成した原画は、ただの一つシーンがなく、悩みと判断の集合体になる「考えの痕跡」だ。
+            <br>ジブリのキャラクターをもっとも生きていると感じられる理由はそのため。職人の目は単純に形態を描くことがない。形態越しのキャラクターの感情・意図を読み出す。手の感覚は感情を反映し、リズムを作り、動きに命を付与する。カメラはたびたび彼らの指先をクローズアップする。
+          </p>
+        </div>
+        <div class="content-item">
+          <img src="images/ghibli-inside03.png">
+          <h5>３．光と色で完成される感性　～背景作業の芸術性～</h5>
+          <p>
+            ジブリの世界を思い出すとき、私たちの心に一番浮かぶことはキャラクターがなく、「場面」かもしれない。夕焼けが燃える田舎道、風に振れる野原、木下のバス停。その場面は単純な背景はない。話を抱えるもう一つの主人公だ。
+            <br>ジブリの背景画は絵画的な完成度でもはや芸術に近い。背景画作業者の筆は簡単に景色を描写にとどまらない。空の色は時間と感情に添え変奏され、木葉の明暗は人物の心と絡み合っていた。草の葉一つにも風がとどまる痕跡があり、雨に濡れた土砂には余韻嫋嫋となる。
+            <br>画は停止されていても、見ている人には「動き」の感覚が与えられる。それに影響を及ぼすのが色の温度。青い夜明けの光が染み込む路地、暖かい夕焼けが滲む谷間、霧の立ち込めた森地、各自の背景はその姿で時間の流れている感覚を感じられるようにする。背景画作業者たちは目に見えない気流も表現できるまで何十回色を塗り重ねり、光の方向を細心に調整する。
+            <br>
+          </p>
+        </div>
+        <div class="content-item">
+          <img src="images/ghibli-inside04.png">
+          <h5>４．サウンドが作る今一つの世界　～録音室と音楽作業～</h5>
+          <p>
+            目で見える世界がジブリの風景というと、耳で聞く世界は音楽と音で完成される。スタジオの隅、外部に遮断される静かな録音室には魔法をかけている。その場所は音が感情に変える見えない世界の扉が開ける空間。
+            <br>久石譲の音楽はジブリの作品をもっとジブリのように作る存在の本質。メロディーは単純だけれども、深い。華やかだけれども、長い時間の間、心に残る。彼の作業室では、初音を演奏する前、多くの台詞と絵、コンテが開ける。場面の雰囲気、キャラクターの感情、言葉で伝えられないスペースまで、一つ一つを繰り返して、音を作る。時にはピアノの前で、何時間がかかっても一つの節をため、続けて反復して、感情を調律することもある。
+            <br>録音ブースでも、新しい風景の連続。声優たちは単純に台詞を読まない。彼らは、その瞬間、キャラクターになる。息を吸って、泣いて、笑いながら、場面の中で吸収される。口の形にあって正確に動かなければならない技術だが、一番重要なことは感情の本気。一つの短い台詞でも、人物の成長・悲しみ・あるいは決心が抱えていなければならない。
+          </p>
+        </div>
+        <div class="content-item">
+          <img src="images/ghibli-inside05.png">
+          <h5>５．時間を抱える記録　～アーカイブの空間公開～</h5>
+          <p>
+            スタジオのもっとも静かな、深い片隅には、時間を抱える部屋がある。その場所は作業の終わりではなく、また別のスタートのための記憶の場所だ。何十年間のジブリが歩いてきた旅程がそっくり残っているそのアーカイブは、単純な預り所を超え、ジブリの「魂」がある場所だ、というべきだ。
+            <br>引き出しを開けると、手あかがつく原画と鉛筆あの跡が鮮明に残っているコンテが姿を現す。修正の痕跡がいくえにも積み重ねられたキャラクターデザイン試案、丁寧に整理された色感テースト資料、時代の感性が抱える公式ポスターと広告物。全てがまるで時間の階段のように積んでいる。その中には、ただの作業結果物がない、一シーンを完成するまでの考えとか悩み、躊躇、そして熱情が潜めている。
+            <br>壁には監督と作家、制作プロデューサーのインタビュー記録も整理されている。彼らの声が、会議で出た小さいアイデアが、いくら普通なことでも、次の日の名場面の種になることも。文書に残った短いメモ一つでも真心がある。アーカイブはそのように、言葉より静かな方式で、ジブリの哲学と精神を証言している。
+          </p>
+        </div>
+        <div class="content-item">
+          <img src="images/ghibli-inside06.png">
+          <h5>６．作品超えの本気　～創作者たちのインタビューと哲学～</h5>
+          <p>
+            ジブリの話には単純な画面の上に開けない。それは作品越えの、創作者たちの内面から始める。宮崎駿・高畑勲庵野秀明など、様々な創作者たちが築き上げた考えの結晶が集まり、ジブリという世界観を作った。彼らの言葉はただの作業の説明ではなく、世の中を眺める一つの目線。
+            <br>宮崎駿監督のインタビューでいうことも、アニメーションを作ることは既に人間と自然、生と死について、質問を投げること。彼は時々「子供が育つ世界はどのような姿になるか」という質問を自分自身にしながら、作業を始めたといった。その質問は「となりのトトロ」でも、「もののけ姫」でも瑞々しく生きて息をする。 
+            <br>創作者たちはインタビューの中で、作業の後日談よりも、深い悩みを言う。どうしたら台詞もない場面だとしても、感情を伝えられるか。または、今この時代に必要な話は何なのか。
+            <br>しかし、結局技術的な完成より最も重要なことは、「何を話したいか」ということ。そして彼らの悩みの決着の地はいつも、「人間らしさ」に戻る。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!---------------- section.map ---------------->
+  <section class="map" id="map-section">
+    <div class="map-wrap">
+      <div class="map-inner">
+        <div class="main-title">
+          <h2 class="ja">現実中のジブリ</h2>
+          <p>スタジオジブリの世界観を直接体験！</p>
+          <a href="pages_jp/total-ghibli_jp.html" class="more-btn">
+            <span class="ja">もっと見る</span>
+          </a>
+        </div>
+        <div class="map-container">
+          <div class="map-point-img">
+            <img src="images/location-map.png" alt="ghibli-map">
+          </div>
+          <div class="map-point">
+            <div class="map-point-title">
+              <a href="pages_jp/ghibli-museum_jp.html" class="point-title1 ja">ジブリミュージアム</a>
+              <a href="pages_jp/ghibli-park_jp.html" class="point-title2 ja">ジブリパーク</a>
+            </div>
+            <div class="map-point-ping">
+              <img src="images/location-select.png" alt="" class="ping1">
+              <img src="images/location-select.png" alt="" class="ping2">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="map-mini-item">
+        <div class="item mini1">
+          <img src="images/location-ani-mini.png" alt="">
+        </div>
+        <div class="item mini2">
+          <img src="images/location-ani-mini.png" alt="">
+        </div>
+        <div class="item mini3">
+          <img src="images/location-ani-mini.png" alt="">
+        </div>
+        <div class="item mini4">
+          <img src="images/location-ani-mini.png" alt="">
+        </div>
+        <div class="item mini5">
+          <img src="images/location-ani-mini.png" alt="">
+        </div>
+        <div class="item mini6">
+          <img src="images/location-ani-mini.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!---------------- section.email ---------------->
+  <section class="email" id="email-section">
+    <div class="email-inner">
+      <h2 class="ja">意見などのメール送付</h2>
+      <div class="email-box">
+        <span>post@ghibli.jp</span>
+      </div>
+      <p class="email-notice">
+        スタジオジブリでは、お送りのメールについて内容と関係なく、回送はお届けしていません。</p>
+      <div class="email-notice-wrap">
+        <p>保安上の理由で、添付ファイルを開けなく、回送しなく、受信後6ヶ月が経つと削除しています。</p>
+        <p>また、スタジオジブリでは、皆さんにお送り頂く様々な操作物について、メールに受信された内容は削除し、郵便で受信された内容は廃棄しています。</p>
+        <p>何卒ご理解のほど、宜しくお願い申し上げます。</p>
+      </div>
+    </div>
+  </section>
+
+  <!---------------- footer ---------------->
+  <div class="footer-include"></div>
+
+  <!---------------- aos ---------------->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+  AOS.init();
+  </script>
+
+  <!---------------- swiper ---------------->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+
+  <!-- js -->
+  <script src="js/index.js"></script>
+
+</body>
+
+</html>

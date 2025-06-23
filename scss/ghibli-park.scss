@@ -1,0 +1,3473 @@
+/* Import Local SCSS Files */
+@import 'variables', 'reset', 'fonts', 'header', 'footer';
+
+[class*=inner]{ width: 1160px;margin: auto; }
+/* ############ Common CSS ############*/
+// 가로 스크롤 제거
+body{
+  overflow-x: hidden;
+}
+
+// section
+section{
+  height: auto;
+  align-items: center;
+}
+
+// inner
+[class*=inner]{
+  width: 1160px;
+  height: inherit;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* studio-wrap */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+//kr
+body.ghibli-total {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  .header-include{
+    &.ghibli-total-header{
+      position: relative;
+    z-index: 9999;
+    background: $Pure-Black;
+    .header{
+      .logo-black{
+        img{
+          filter: invert(100);
+        }
+      }
+      .header-box{
+        .search-box{
+          label{
+            input{
+              background-color: transparent;
+              border: 3px solid $White;
+              color: $White;
+              &::placeholder{
+                color: $White;
+              }
+            }
+            button{
+              background-color: transparent;
+              i{
+                color: $White;
+              }
+            }
+          }
+        }
+        .global-btn{
+          i{
+            color: $White;
+          }
+        }
+        .hamburger-btn{
+          i{
+            color: $White;
+          }
+        }
+      }
+    }
+    .global-list{
+      background-color: $Light-Black;
+      ul{
+        li{
+          &::after{
+            border-color: transparent transparent $Light-Black transparent;
+          }
+          a{
+            color: $White;
+            border-bottom: 1px solid $White;
+          }
+        }
+      }
+    }
+    .sub-wrap{
+      background-color: rgba($Light-Black, .9);
+      .close-btn{
+        i{
+          color: $White;
+        }
+      }
+      .sub-menu-inner{
+        .sub-menu-items{
+          .sub-menu-item{
+            .sub-menu-title{
+              h2{
+                color: $White;
+                &::after{
+                  background-color: rgba($White, .3);
+                }
+                &::before{
+                  background-color: rgba($White, .3);
+                }
+              }
+            }
+            .sub-menu-content{
+              .sub-menu-content-item{
+                a{
+                  color: $White;
+                  &:hover{
+                    filter: invert(100) grayscale(100);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    }
+  }
+  .studio-wrap {
+    position: relative; 
+    z-index: 1; 
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: flex 0.5s ease;
+    &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px; 
+    background: linear-gradient(to bottom, rgba(#000, 1), rgba(#000, 0));
+    z-index: 2; 
+    pointer-events: none;
+  }
+    &.expand-left {
+      .ghibli-park-entrance {
+        flex: 1 1 100%;
+        img {
+          transform: translate(-50%, -50%) scale(1.1);
+        }
+        &::before {
+          opacity: 0;
+        }
+      }
+      .ghibli-museum-entrance {
+        flex: 0 0 0;
+        opacity: 0;
+        pointer-events: none;
+        img {
+          opacity: 0;
+        }
+        &::before {
+          opacity: 0.5;
+        }
+      }
+    }
+    &.expand-right {
+      .ghibli-museum-entrance {
+        flex: 1 1 100%;
+        img {
+          transform: translate(-50%, -50%) scale(1.1);
+        }
+        &::before {
+          opacity: 0;
+        }
+      }
+      .ghibli-park-entrance {
+        flex: 0 0 0;
+        opacity: 0;
+        pointer-events: none;
+        img {
+          opacity: 0;
+        }
+        &::before {
+          opacity: 0.5;
+        }
+      }
+    }
+    &:not(.expand-left):not(.expand-right) {
+      .ghibli-park-entrance:hover {
+        flex: 3;
+        &::before {
+          opacity: 0;
+        }
+        img {
+          transform: translate(-50%, -50%) scale(1.1);
+        }
+      }
+      .ghibli-park-entrance:hover ~ .ghibli-museum-entrance {
+        flex: 1;
+      }
+      .ghibli-museum-entrance:hover {
+        flex: 3;
+        &::before {
+          opacity: 0;
+        }
+        img {
+          transform: translate(-50%, -50%) scale(1.1);
+        }
+      }
+      .ghibli-museum-entrance:hover ~ .ghibli-park-entrance {
+        flex: 1;
+      }
+    }
+  }
+  .side {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    transition: flex 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+    cursor: pointer;
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      pointer-events: none;
+      z-index: 5;
+      transition: opacity 0.5s ease;
+    }
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(1);
+      width: 500px;
+      height: auto;
+      transition: transform 0.5s ease, opacity 0.5s ease;
+      z-index: 10;
+      pointer-events: none;
+    }
+  
+    &.ghibli-park-entrance {
+      background: url(../images/ghibli-park-background.png) center center / cover no-repeat;
+    }
+  
+    &.ghibli-museum-entrance {
+      background: url(../images/ghibli-museum-background.png) center center / cover no-repeat;
+      img {
+        filter: invert(100%);
+      }
+    }
+  }
+}
+//en
+body.ghibli-total {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  .header-include{
+    &.ghibli-total-header-en{
+      position: relative;
+    z-index: 9999;
+    background: $Pure-Black;
+    .header{
+      .logo-black{
+        img{
+          filter: invert(100);
+        }
+      }
+      .header-box{
+        .search-box{
+          label{
+            input{
+              background-color: transparent;
+              border: 3px solid $White;
+              color: $White;
+              &::placeholder{
+                color: $White;
+              }
+            }
+            button{
+              background-color: transparent;
+              i{
+                color: $White;
+              }
+            }
+          }
+        }
+        .global-btn{
+          i{
+            color: $White;
+          }
+        }
+        .hamburger-btn{
+          i{
+            color: $White;
+          }
+        }
+      }
+    }
+    .global-list{
+      background-color: $Light-Black;
+      ul{
+        li{
+          &::after{
+            border-color: transparent transparent $Light-Black transparent;
+          }
+          a{
+            color: $White;
+            border-bottom: 1px solid $White;
+          }
+        }
+      }
+    }
+    .sub-wrap{
+      background-color: rgba($Light-Black, .9);
+      .close-btn{
+        i{
+          color: $White;
+        }
+      }
+      .sub-menu-inner{
+        .sub-menu-items{
+          .sub-menu-item{
+            .sub-menu-title{
+              h2{
+                font-size: 30px;
+                color: $White;
+                &::after{
+                  background-color: rgba($White, .3);
+                }
+                &::before{
+                  background-color: rgba($White, .3);
+                }
+              }
+            }
+            .sub-menu-content{
+              .sub-menu-content-item{
+                a{
+                  font-size: 20px;
+                  color: $White;
+                  &:hover{
+                    filter: invert(100) grayscale(100);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    }
+  }
+  .studio-wrap {
+    position: relative; 
+    z-index: 1; 
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: flex 0.5s ease;
+    &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px; 
+    background: linear-gradient(to bottom, rgba(#000, 1), rgba(#000, 0));
+    z-index: 2; 
+    pointer-events: none;
+  }
+    &.expand-left {
+      .ghibli-park-entrance-en {
+        flex: 1 1 100%;
+        img {
+          transform: translate(-50%, -50%) scale(1.1);
+        }
+        &::before {
+          opacity: 0;
+        }
+      }
+      .ghibli-museum-entrance-en {
+        flex: 0 0 0;
+        opacity: 0;
+        pointer-events: none;
+        img {
+          opacity: 0;
+        }
+        &::before {
+          opacity: 0.5;
+        }
+      }
+    }
+    &.expand-right {
+      .ghibli-museum-entrance-en {
+        flex: 1 1 100%;
+        img {
+          transform: translate(-50%, -50%) scale(1.1);
+        }
+        &::before {
+          opacity: 0;
+        }
+      }
+      .ghibli-park-entrance-en {
+        flex: 0 0 0;
+        opacity: 0;
+        pointer-events: none;
+        img {
+          opacity: 0;
+        }
+        &::before {
+          opacity: 0.5;
+        }
+      }
+    }
+    &:not(.expand-left):not(.expand-right) {
+      .ghibli-park-entrance-en:hover {
+        flex: 3;
+        &::before {
+          opacity: 0;
+        }
+        img {
+          transform: translate(-50%, -50%) scale(1.1);
+        }
+      }
+      .ghibli-park-entrance-en:hover ~ .ghibli-museum-entrance-en {
+        flex: 1;
+      }
+      .ghibli-museum-entrance-en:hover {
+        flex: 3;
+        &::before {
+          opacity: 0;
+        }
+        img {
+          transform: translate(-50%, -50%) scale(1.1);
+        }
+      }
+      .ghibli-museum-entrance-en:hover ~ .ghibli-park-entrance-en {
+        flex: 1;
+      }
+    }
+  }
+  .side {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    transition: flex 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+    cursor: pointer;
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      pointer-events: none;
+      z-index: 5;
+      transition: opacity 0.5s ease;
+    }
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(1);
+      width: 500px;
+      height: auto;
+      transition: transform 0.5s ease, opacity 0.5s ease;
+      z-index: 10;
+      pointer-events: none;
+    }
+  
+    &.ghibli-park-entrance-en {
+      background: url(../images/ghibli-park-background.png) center center / cover no-repeat;
+    }
+  
+    &.ghibli-museum-entrance-en {
+      background: url(../images/ghibli-museum-background.png) center center / cover no-repeat;
+      img {
+        filter: invert(100%);
+      }
+    }
+  }
+}
+
+/* park-kr */
+.header-include{
+  &.ghibli-park-header{
+    position: relative;
+    z-index: 9999;
+    background-color: $Moss-Green-Light;
+    border-bottom: 1px solid rgba($color: $Moss-Green, $alpha: 0.5);
+  .header{
+    .logo-black{
+      img{
+        filter: invert(50%) sepia(23%) saturate(620%) hue-rotate(31deg) brightness(94%) contrast(88%);
+      }
+    }
+    .header-box{
+      .search-box{
+        label{
+          input{
+            &::placeholder{}
+          }
+          button{
+            i{}
+          }
+        }
+      }
+      .global-btn{
+        i{}
+      }
+      .hamburger-btn{
+        i{}
+      }
+    }
+  }
+  .global-list{
+    ul{
+      li{
+        &::after{}
+        a{}
+      }
+    }
+  }
+  .sub-wrap{
+    .close-btn{
+      i{}
+    }
+    .sub-menu-inner{
+      .sub-menu-items{
+        .sub-menu-item{
+          .sub-menu-title{
+            h2{
+              &::after{}
+              &::before{}
+            }
+          }
+          .sub-menu-content{
+            .sub-menu-content-item{
+              a{
+                &:hover{}
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  }
+}
+.ghibli-park-wrap{
+  background-color: $Moss-Green-Light;
+  .ghibli-inner{
+    /* park-main */
+    .park-main {
+      margin-top: 55px;
+      text-align: center; 
+      .park-big-logo {
+        img {
+          width: 579px;
+          height: 177px;
+          display: inline-block;
+        }
+      }
+      .official-web {
+        margin: 30px auto 0;
+        width: 210px;
+        height: 60px;
+        background: rgba($color: $Moss-Green, $alpha: 0.7);
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover{
+          background: $Moss-Green;
+        }
+        h3 {
+          font-family: $Highlight-Font;
+          font-size: 30px;
+          color: $White;
+          margin: 0;
+          &.ja{
+            font-family: $Highlight-Jp;
+          }
+        }
+      }
+    }
+    /* info */
+    .park-info {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+      background: $White;
+      border-radius: 15px;
+      padding: 70px;
+      margin-top: 80px;
+      .park-intro,
+      .park-time,
+      .park-next-ticket {
+        width: 100%;
+        max-width: 800px;
+        text-align: center;
+        h3 {
+          font-size: $h3-px;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+        span {
+          font-size: $h5-px;
+          line-height: 1.5;
+        }
+        p {
+          font-size: $h5-px;
+          margin-top: 20px;
+        }
+      }
+      .park-time {
+        .time-detail {
+          display: flex;
+          justify-content: space-between;
+          max-width: 200px;
+          margin: 0 auto 10px;
+          &.ja{
+            max-width: 230px;
+          }
+          .day {
+            display: inline-flex;
+            align-items: center;
+            gap: 20px;  
+            font-size: $h5-px;
+          }
+          .time {
+            text-align: right;
+            flex-shrink: 0;
+            font-size: $h5-px;
+          }
+        }
+        .time-detail:last-child .day::after {
+          content: "";
+        }
+        .closed-day {
+          p {
+            text-align: center;
+            font-style: italic;
+            margin-top: 30px;
+          }
+        }
+      }
+      .park-next-ticket{
+        h3{
+          color: $Moss-Green;
+        }
+        span{
+          font-size: $h3-px;
+          font-weight: bold;
+        }
+      }
+      .divider {
+        width: 100%;
+        max-width: 800px;
+        height: 2px;
+        background-color: rgba($color: $Moss-Green, $alpha: 0.7);
+      }
+    }
+    .park-ticket {
+      margin-top: 110px;
+      > h3 {
+        font-size: 40px;
+        font-weight: bold;
+        margin-bottom: 25px;
+      }
+      .ticket-wrap {
+        display: flex;
+        justify-content: space-between;
+        .ticket01 {
+          box-sizing: border-box;
+          padding: 30px 50px;
+          background: url(../images/ticket-background.png) no-repeat center center;
+          background-size: cover;  
+          width: 564px;
+          height: 793px;
+          h2 {
+            font-family: $Highlight-Font;
+            font-size: 40px;
+            &.ja{
+              font-family: $Highlight-Jp;
+            }
+          }
+          .ticket-detail-wrap {
+            .ticket-detail {
+              &:nth-child(2) h3{
+                padding-top: 50px;
+              }
+              h3 {
+                padding-top: 60px;
+                font-size: 32px;
+                font-weight: bold;
+                position: relative;
+                padding-bottom: 8px;
+                margin-bottom: 15px;
+                &::after {
+                  content: "";
+                  position: absolute;
+                  bottom: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 2px;
+                  margin-top: 15px;
+                  background-color: $Moss-Green;
+                }
+              }
+              .ticket-age {
+                display: flex;
+                justify-content: space-between;
+                span {
+                  font-size: $h4-px;
+                  line-height: 1.5;
+                }
+              }
+            }
+            .ticket-barcode {
+              display: flex;
+              align-items: center;
+              flex-direction: column;
+              .facilities-img {
+                margin-top: 50px;
+                gap: 5px;
+                a{
+                  img {
+                    margin-left: 5px;
+                    width: 70px;
+                  }
+                  .facili01{
+                    margin-left: 0px;
+                  }
+                  .facili02{
+                    margin-top: 6px;
+                  }
+                  .facili05{
+                    margin-left: 0px;
+                    width: 79px;
+                    margin-top: 7px;
+                  }
+                }
+              }
+              .park-mini-logo {
+                margin-top: 5px;
+                font-size: $h4-px;
+                font-weight: bold;
+              }
+    
+              .barcode-img {
+                img {}
+              }
+            }
+          }
+        }
+
+        .quick-link-btn:hover {
+          background-color: $Moss-Green-Light;
+        }
+        .quick-link-btn.enabled {
+          cursor: pointer;
+          opacity: 1;
+        }
+      }
+    }
+    .notice-accordion-wrap {
+      .go-reservation {
+        display: flex;              // 가로 배치
+        justify-content: center;   // 가운데 정렬
+        align-items: center;       // 수직 정렬
+        gap: 8px;                  // 아이콘과 텍스트 사이 간격
+        width: 240px;
+        height: 50px;
+        margin: 50px auto;
+        border-radius: 50px;
+        background-color: rgba($Moss-Green, 0.7);
+        color: $White;
+        font-family: $Highlight-Font;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        &.ja{
+          font-family: $Highlight-Jp;
+        }
+        &:hover {
+          background-color: darken($Moss-Green, 10%);
+        }
+
+        span {
+          font-size: 30px;
+          display: inline; // 이제 불필요한 flex 제거
+        }
+
+        i {
+          font-size: 25px;
+          line-height: 1;
+          vertical-align: middle;
+        }
+      }
+
+
+      .notice-accordion-item {
+        width: 100%;
+        .notice-accordion-title {
+          height: 75px;
+          background-color: $Banana;
+          font-size: $h4-px;
+          box-sizing: border-box;
+          padding: 20px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          cursor: pointer;
+          margin-top: 15px;
+          &:hover {
+            background-color: rgba($color: $Moss-Green, $alpha: 0.5);
+          }
+          &.active {
+            color: $White;
+            background-color: $Moss-Green;
+            font-weight: bold;
+          }
+          i {
+            transition: transform 0.3s ease;
+            font-size: 20px;
+          }
+          &.active i {
+            transform: rotate(180deg); 
+          }
+        }
+        .notice-accordion-content {
+          max-height: 0;
+          overflow: hidden;
+          padding: 0 20px; 
+          opacity: 0;
+          background-color: $Banana;
+          visibility: hidden;
+          transition: max-height 0.5s ease, opacity 0.3s ease, visibility 0.3s ease;
+          p{
+            line-height: 150%;
+          }
+          ul {
+            list-style: disc;
+            padding-left: 20px;
+            line-height: 150%;
+            li {
+              margin-bottom: 10px;
+              list-style: disc;
+              > ul {
+                > li{
+                  list-style: circle;
+                  padding-left: 20px;
+                }
+              }
+              a {
+                color: inherit;
+                text-decoration: underline;
+                color: rgba($color: $Main-Text, $alpha: 0.7);
+                &:hover{
+                  color: $Main-Text;
+                }
+              }
+            }
+          }
+        }
+        &.active .notice-accordion-content {
+          padding: 20px;
+          display: block;
+          max-height: 1000px;
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+    .park-load {
+      margin-top: 100px;
+      .load-address {
+        h3 {
+          font-size: 40px;
+          font-weight: bold;
+        }
+        span {
+          font-size: 24px;
+          margin-top: 10px;
+          margin-bottom: 30px;
+          display: block;
+        }
+      }
+      .load-map {
+        box-sizing: border-box;
+        width: 100%;
+        height: 500px;
+        border: none;
+      }
+      .load-way {
+        margin-top: 20px;
+        display: flex;
+        gap: 20px;
+        .public-transportation {
+          flex: 2;
+          background: $Banana;
+          padding: 20px;
+          box-sizing: border-box;
+          display: flex;        
+          flex-direction: column;
+          h4 {
+            font-size: 24px;
+            font-weight: bold;
+          }
+          .way-title-wrap {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            align-items: stretch;
+            .train,
+            .bus,
+            .car {
+              box-sizing: border-box;
+              padding: 20px;
+              flex: 1;
+              h5 {
+                font-size: 20px;
+                font-weight: bold;
+              }
+              span {
+                display: block;
+                margin-top: 10px;
+                line-height: 150%;
+              }
+            }
+            .divider {
+              width: 1px;
+              background-color: rgba($color: $Moss-Green, $alpha: 0.5);
+              margin: 0 10px; 
+            }
+          }
+          .more-notice {
+            margin-top: auto;      
+            align-self: center;
+            ul {
+              align-items: center;
+              box-sizing: border-box;
+              font-size: 13px;
+              padding: 10px; 
+              li {
+                line-height: 150%;
+                text-align: center;
+              }
+            }
+          }
+        }
+        .private-car {
+          flex: 1;
+          background: $Banana;
+          padding: 20px;
+          box-sizing: border-box;
+          display: flex;        
+          flex-direction: column;
+          h4 {
+            font-size: 24px;
+            font-weight: bold;
+          }
+          .way-title-wrap {
+            .car {
+              padding: 20px;
+              h5 {
+                font-size: 20px;
+                font-weight: bold;
+              }
+              span {
+                display: block;
+                margin-top: 10px;
+                line-height: 150%;
+              }
+            }
+          }
+          .more-notice {
+            margin-top: auto;      
+            align-self: center;
+            ul {
+              align-items: center;
+              box-sizing: border-box;
+              font-size: 13px;
+              padding: 10px; 
+              li {
+                line-height: 150%;
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+      .approach-measures {
+        margin: 50px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px; 
+        width: 430px;
+        height: 60px;
+        border-radius: 50px;
+        background-color: rgba($color: $Moss-Green, $alpha: 0.7);
+        color: $White;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        h3 {
+          font-family: $Highlight-Font;
+          font-size: 30px;
+          &.ja{
+            font-size: 25px;
+            font-family: $Highlight-Jp;
+          }
+        }
+        .bi {
+          font-size: 25px;
+        }
+
+        &:hover {
+          background-color: darken($Moss-Green, 10%);
+        }
+      }
+
+    }
+
+  }
+}
+
+/* park-en */
+.header-include{
+  &.ghibli-park-header-en{
+    position: relative;
+    z-index: 9999;
+    background-color: $Moss-Green-Light;
+    border-bottom: 1px solid rgba($color: $Moss-Green, $alpha: 0.5);
+  .header{
+    .logo-black{
+      img{
+        filter: invert(50%) sepia(23%) saturate(620%) hue-rotate(31deg) brightness(94%) contrast(88%);
+      }
+    }
+    .header-box{
+      .search-box{
+        label{
+          input{
+            &::placeholder{}
+          }
+          button{
+            i{}
+          }
+        }
+      }
+      .global-btn{
+        i{}
+      }
+      .hamburger-btn{
+        i{}
+      }
+    }
+  }
+  .global-list{
+    ul{
+      li{
+        &::after{}
+        a{}
+      }
+    }
+  }
+  .sub-wrap{
+    .close-btn{
+      i{}
+    }
+    .sub-menu-inner{
+      .sub-menu-items{
+        .sub-menu-item{
+          .sub-menu-title{
+            h2{
+              font-size: 30px;
+              &::after{}
+              &::before{}
+            }
+          }
+          .sub-menu-content{
+            .sub-menu-content-item{
+              a{
+                font-size: 20px;
+                &:hover{}
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  }
+}
+.park-en{
+  background-color: $Moss-Green-Light;
+  .ghibli-inner{
+    /* park-main */
+    .park-main {
+      margin-top: 55px;
+      text-align: center; 
+      .park-big-logo {
+        img {
+          width: 579px;
+          height: 177px;
+          display: inline-block;
+        }
+      }
+      .official-web {
+        margin: 30px auto 0;
+        width: 250px;
+        height: 60px;
+        background: rgba($color: $Moss-Green, $alpha: 0.7);
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover{
+          background: $Moss-Green;
+        }
+        h3 {
+          font-family: $Highlight-Font;
+          font-size: 30px;
+          color: $White;
+          margin: 0;
+        }
+      }
+    }
+    /* info */
+    .park-info {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+      background: $White;
+      border-radius: 15px;
+      padding: 70px;
+      margin-top: 80px;
+      .park-intro,
+      .park-time,
+      .park-next-ticket {
+        width: 100%;
+        max-width: 800px;
+        text-align: center;
+        h3 {
+          font-size: $h3-px;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+        span {
+          font-size: $h5-px;
+          line-height: 1.5;
+        }
+        p {
+          font-size: $h5-px;
+          margin-top: 20px;
+        }
+      }
+      .park-time {
+        .time-detail {
+          display: flex;
+          justify-content: space-between;
+          max-width: 300px;
+          margin: 0 auto 10px;
+          .day {
+            display: inline-flex;
+            align-items: center;
+            gap: 20px;  
+            font-size: $h5-px;
+            &::after {
+              content: none;  
+            }
+          }
+          .time {
+            text-align: right;
+            flex-shrink: 0;
+            font-size: $h5-px;
+          }
+        }
+        .time-detail:last-child .day::after {
+          content: "";
+        }
+        .closed-day {
+          p {
+            text-align: center;
+            font-style: italic;
+            margin-top: 30px;
+          }
+        }
+      }
+      .park-next-ticket{
+        h3{
+          color: $Moss-Green;
+        }
+        span{
+          font-size: $h3-px;
+          font-weight: bold;
+        }
+      }
+      .divider {
+        width: 100%;
+        max-width: 800px;
+        height: 2px;
+        background-color: rgba($color: $Moss-Green, $alpha: 0.7);
+      }
+    }
+    .park-ticket {
+      margin-top: 110px;
+      & h3 {
+        font-size: 40px;
+        font-weight: bold;
+        margin-bottom: 25px;
+      }
+      .ticket-wrap {
+        display: flex;
+        justify-content: space-between;
+        .ticket01 {
+          box-sizing: border-box;
+          padding: 30px 50px;
+          background: url(../images/ticket-background.png) no-repeat center center;
+          background-size: cover;  
+          width: 564px;
+          height: 793px;
+          h2 {
+            font-family: $Highlight-Font;
+            font-size: 37px;
+          }
+          .ticket-detail-wrap {
+            .ticket-detail {
+              &:nth-child(2) h3{
+                padding-top: 50px;
+              }
+              h3 {
+                padding-top: 60px;
+                font-size: 32px;
+                font-weight: bold;
+                position: relative;
+                padding-bottom: 8px;
+                margin-bottom: 15px;
+                &::after {
+                  content: "";
+                  position: absolute;
+                  bottom: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 2px;
+                  margin-top: 15px;
+                  background-color: $Moss-Green;
+                }
+              }
+              .ticket-age {
+                display: flex;
+                justify-content: space-between;
+                span {
+                  font-size: $h4-px;
+                  line-height: 1.5;
+                }
+              }
+            }
+            .ticket-barcode {
+              display: flex;
+              align-items: center;
+              flex-direction: column;
+              .facilities-img {
+                margin-top: 50px;
+                gap: 5px;
+                a{
+                  img {
+                    margin-left: 5px;
+                    width: 70px;
+                  }
+                  .facili01{
+                    margin-left: 0px;
+                  }
+                  .facili02{
+                    margin-top: 6px;
+                  }
+                  .facili05{
+                    margin-left: 0px;
+                    width: 79px;
+                    margin-top: 7px;
+                  }
+                }
+              }
+              .park-mini-logo {
+                margin-top: 5px;
+                font-size: $h4-px;
+                font-weight: bold;
+              }
+              .barcode-img {
+                img {}
+              }
+            }
+          }
+        }
+        .quick-link-btn:hover {
+          background-color: $Moss-Green-Light;
+        }
+        .quick-link-btn.enabled {
+          cursor: pointer;
+          opacity: 1;
+        }
+      }
+    }
+    .notice-accordion-wrap {
+      .go-reservation {
+        display: flex;            
+        justify-content: center;   
+        align-items: center;      
+        gap: 8px;                  
+        width: 290px;
+        height: 50px;
+        margin: 50px auto;
+        border-radius: 50px;
+        background-color: rgba($Moss-Green, 0.7);
+        color: $White;
+        font-family: $Highlight-Font;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: darken($Moss-Green, 10%);
+        }
+        span {
+          font-size: 30px;
+          display: inline; 
+        }
+        i {
+          font-size: 25px;
+          line-height: 1;
+          vertical-align: middle;
+        }
+      }
+      .notice-accordion-item {
+        width: 100%;
+        .notice-accordion-title {
+          height: 75px;
+          background-color: $Banana;
+          font-size: $h4-px;
+          box-sizing: border-box;
+          padding: 20px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          cursor: pointer;
+          margin-top: 15px;
+          &:hover {
+            background-color: rgba($color: $Moss-Green, $alpha: 0.5);
+          }
+          &.active {
+            color: $White;
+            background-color: $Moss-Green;
+            font-weight: bold;
+          }
+          i {
+            transition: transform 0.3s ease;
+            font-size: 20px;
+          }
+          &.active i {
+            transform: rotate(180deg); 
+          }
+        }
+        .notice-accordion-content {
+          max-height: 0;
+          overflow: hidden;
+          padding: 0 20px; 
+          opacity: 0;
+          background-color: $Banana;
+          visibility: hidden;
+          transition: max-height 0.5s ease, opacity 0.3s ease, visibility 0.3s ease;
+          p{}
+          ul {
+            list-style: disc;
+            padding-left: 20px;
+            li {
+              margin-bottom: 10px;
+              list-style: disc;
+              & ul {
+                & li{
+                  list-style: circle;
+                  padding-left: 20px;
+                }
+              }
+              a {
+                color: inherit;
+                text-decoration: underline;
+                color: rgba($color: $Main-Text, $alpha: 0.7);
+                &:hover{
+                  color: $Main-Text;
+                }
+              }
+            }
+          }
+        }
+        &.active .notice-accordion-content {
+          padding: 20px;
+          display: block;
+          max-height: 1000px;
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+    .park-load {
+      margin-top: 100px;
+      .load-address {
+        h3 {
+          font-size: 40px;
+          font-weight: bold;
+        }
+        span {
+          font-size: 24px;
+          margin-top: 10px;
+          margin-bottom: 30px;
+          display: block;
+        }
+      }
+      .load-map {
+        box-sizing: border-box;
+        width: 100%;
+        height: 500px;
+        border: none;
+      }
+      .load-way {
+        margin-top: 20px;
+        display: flex;
+        gap: 20px;
+        .public-transportation {
+          flex: 2;
+          background: $Banana;
+          padding: 20px;
+          box-sizing: border-box;
+          display: flex;        
+          flex-direction: column;
+          h4 {
+            font-size: 24px;
+            font-weight: bold;
+          }
+          .way-title-wrap {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            align-items: stretch;
+            .train,
+            .bus,
+            .car {
+              box-sizing: border-box;
+              padding: 20px;
+              flex: 1;
+              h5 {
+                font-size: 20px;
+                font-weight: bold;
+              }
+              span {
+                display: block;
+                margin-top: 10px;
+              }
+            }
+            .divider {
+              width: 1px;
+              background-color: rgba($color: $Moss-Green, $alpha: 0.5);
+              margin: 0 10px; 
+            }
+          }
+          .more-notice {
+            margin-top: auto;      
+            align-self: center;
+            ul {
+              align-items: center;
+              box-sizing: border-box;
+              font-size: 13px;
+              padding: 10px; 
+              li {
+                text-align: center;
+              }
+            }
+          }
+        }
+        .private-car {
+          flex: 1;
+          background: $Banana;
+          padding: 20px;
+          box-sizing: border-box;
+          display: flex;        
+          flex-direction: column;
+          h4 {
+            font-size: 24px;
+            font-weight: bold;
+          }
+          .way-title-wrap {
+            .car {
+              padding: 20px;
+              h5 {
+                font-size: 20px;
+                font-weight: bold;
+              }
+              span {
+                display: block;
+                margin-top: 10px;
+              }
+            }
+          }
+          .more-notice {
+            margin-top: auto;      
+            align-self: center;
+            ul {
+              align-items: center;
+              box-sizing: border-box;
+              font-size: 13px;
+              padding: 10px; 
+              li {
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+      .approach-measures {
+        margin: 50px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px; 
+        width: 630px;
+        height: 60px;
+        border-radius: 50px;
+        background-color: rgba($color: $Moss-Green, $alpha: 0.7);
+        color: $White;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        h3 {
+          font-family: $Highlight-Font;
+          font-size: 30px;
+        }
+        .bi {
+          font-size: 25px;
+        }
+
+        &:hover {
+          background-color: darken($Moss-Green, 10%);
+        }
+      }
+    }
+  }
+}
+
+/* museum-kr */
+.ghibli-museum-header {
+  position: relative;
+  z-index: 9999;
+  background: rgba($Sunset-Orange, 0.1);
+  border-bottom: 1px solid rgba($Sunset-Orange, 0.5);
+  
+  .header {
+    .logo-black {
+      img {
+        filter: invert(86%) sepia(8%) saturate(5451%) hue-rotate(317deg) brightness(97%) contrast(94%);
+      }
+    }
+    .header-box {
+      .search-box {
+        label {
+          position: relative;
+          input {
+            border: 3px solid $Sunset-Orange;
+            &::placeholder {
+            }
+          }
+          button {
+            i {
+              color: $Sunset-Orange;
+            }
+          }
+        }
+      }
+      .global-btn {
+        i {
+          color: $Sunset-Orange;
+        }
+      }
+      .hamburger-btn {
+        i {
+          color: $Sunset-Orange;
+        }
+      }
+    }
+  }
+  .global-list {
+    background-color: $Sunset-Orange;
+    ul {
+      li {
+        &::after {
+          border-color: transparent transparent $Sunset-Orange transparent;
+        }
+
+        a {
+          color: $White;
+          border-bottom: 1px solid $White;
+        }
+      }
+    }
+  }
+  .sub-wrap {
+    color: $White;
+    background-color: rgba($Sunset-Orange, 0.9);
+
+    .close-btn {
+      i {
+        color: $White;
+      }
+    }
+
+    .sub-menu-inner {
+      .sub-menu-items {
+        .sub-menu-item {
+          .sub-menu-title {
+            h2 {
+              &::after {
+                background-color: #f9cea7;
+              }
+              &::before {
+                background-color: #f9cea7;
+              }
+            }
+          }
+
+          .sub-menu-content {
+            .sub-menu-content-item {
+              a {
+                color: $White;
+
+                &:hover {
+                  background: url(../images/main-hover-paint-white.png) no-repeat center center;
+                  background-size: contain;
+                  color: $Sunset-Orange;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.ghibli-museum-wrap{
+  background-color: rgba($color: $Sunset-Orange, $alpha: 0.1);
+  .ghibli-inner{
+    /* park-main */
+    .museum-main {
+      margin-top: 55px;
+      text-align: center; 
+      .museum-big-logo {
+        img {
+          width: 600px;
+          height: 120px;
+          display: inline-block;
+        }
+      }
+      .official-web {
+        margin: 30px auto 0;
+        width: 210px;
+        height: 60px;
+        background: rgba($color: $Sunset-Orange, $alpha: 0.7);
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover{
+          background: $Sunset-Orange;
+        }
+        h3 {
+          font-family: $Highlight-Font;
+          font-size: 30px;
+          color: $White;
+          margin: 0;
+          &.ja{
+            font-family: $Highlight-Jp;
+          }
+        }
+      }
+    }
+    /* info */
+    .museum-info {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+      background: $White;
+      border-radius: 15px;
+      padding: 70px;
+      margin-top: 80px;
+      .museum-intro,
+      .museum-time,
+      .museum-next-ticket {
+        width: 100%;
+        max-width: 800px;
+        text-align: center;
+        h3 {
+          font-size: $h3-px;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+        span {
+          font-size: $h5-px;
+          line-height: 1.5;
+        }
+        p {
+          font-size: $h5-px;
+          margin-top: 20px;
+        }
+      }
+      .museum-time {
+        .time-detail {
+          display: flex;
+          justify-content: center;
+          max-width: 200px;
+          margin: 0 auto 10px;
+          }
+          .time {
+            flex-shrink: 0;
+            font-size: $h5-px;
+          }
+        }
+        .time-detail:last-child .day::after {
+          content: "";
+        }
+        .closed-day {
+          p {
+            text-align: center;
+            font-style: italic;
+            margin-top: 30px;
+          }
+        }
+      }
+      .museum-next-ticket{
+        h3{
+          color: $Sunset-Orange;
+        }
+        div{
+          font-size: $h3-px;
+          font-weight: bold;
+        }
+      }
+      .divider {
+        width: 100%;
+        max-width: 800px;
+        height: 2px;
+        background-color: rgba($color: $Sunset-Orange, $alpha: 0.7);
+      }
+    }
+    .museum-ticket {
+      margin-top: 110px;
+      & h3 {
+        font-size: 40px;
+        font-weight: bold;
+        margin-bottom: 25px;
+      }
+        .ticket-wrap {
+          display: flex;
+          justify-content: space-between;
+          .ticket01 {
+            box-sizing: border-box;
+            padding: 30px 50px;
+            background: url(../images/ticket-background-me.png) no-repeat center center;
+            background-size: cover;  
+            width: 564px;
+            height: 793px;
+            .divider {
+              width: 1px;
+              height: 700px; 
+              background-color: rgba($color: $Sunset-Orange, $alpha: 0.5); 
+              margin: 0 20px; 
+              align-self: center;
+            }
+          h2 {
+            font-family: $Highlight-Font;
+            font-size: 40px;
+            &.ja{
+              font-family: $Highlight-Jp;
+            }
+          }
+          .ticket-detail-wrap {
+            .ticket-detail {
+              &:nth-child(1) h3 {
+                &::after{
+                  display: none;
+                }
+              }
+              &:nth-child(2) h3 {
+                padding-top: 50px;
+              }
+              h3 {
+                padding-top: 60px;
+                font-size: 32px;
+                font-weight: bold;
+                position: relative;
+                padding-bottom: 8px;
+                margin-bottom: 15px;
+        
+                &::after {
+                  content: "";
+                  position: absolute;
+                  bottom: -5px;
+                  left: 0;
+                  width: 100%;
+                  height: 2px;
+                  background-color: $Sunset-Orange;
+                }
+              }
+              .wrap {
+                display: flex;
+                justify-content: center;   
+                align-items: center;    
+                gap: 20px;         
+                width: 100%;
+                box-sizing: border-box;
+                justify-content: space-between;
+                position: relative;
+                margin-bottom: 15px; 
+                border: none;
+                h3{}
+                span{
+                  margin-top: 40px;
+                  color: $Sunset-Orange;
+                }
+                &::after {
+                  content: "";
+                  position: absolute;
+                  bottom: 0;     
+                  left: 0;
+                  width: 100%;   
+                  height: 2px;   
+                  background-color: $Sunset-Orange; 
+                }
+              }
+              .ticket-age {
+                display: flex;
+                justify-content: space-between;
+        
+                span {
+                  font-size: $h4-px;
+                  line-height: 1.5;
+                }
+              }
+            }
+            .ticket-barcode {
+              display: flex;
+              align-items: center;
+              flex-direction: column;
+              .park-mini-logo {
+                margin-top: 50px;
+                font-size: $h4-px;
+                font-weight: bold;
+              }
+              .barcode-img {
+                img {
+                  max-width: 100%;
+                  height: auto;
+                  display: block;
+                }
+              }
+            }
+          }
+        }
+        .ticket02 {
+          box-sizing: border-box;
+          padding: 30px 50px;
+          background: url(../images/ticket-background-me.png) no-repeat center center;
+          background-size: cover;  
+          width: 564px;
+          height: 793px;
+          h2 {
+            font-family: $Highlight-Font;
+            font-size: 40px;
+            margin-bottom: 20px;
+            &.ja{
+              font-family: $Highlight-Jp;
+            }
+          }
+          .explan-reservation {
+            box-sizing: border-box;
+            background: $White;
+            width: 465px;
+            height: 110px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px $Sunset-Orange;
+            display: flex;           
+            justify-content: center;   
+            align-items: center;   
+            text-align: center;      
+            padding: 10px;
+            font-size: 18px;
+            line-height: 130%;    
+          }
+          .lo-ticket-site {
+            padding-top: 70px;
+            text-align: center;
+            h4 {
+              font-weight: bold;
+              font-size: 24px;
+              padding-bottom: 10px;
+            }
+            .lo-web {
+              display: block;
+              width: 155px; height: 40px;
+              line-height: 40px;
+              background: $White;
+              box-shadow: 0 0 10px $Sunset-Orange;
+              font-size: 20px;
+              margin: auto;
+              border-radius: 30px;
+              &:hover{
+                background-color: $Sunset-Orange;
+                color: $White;
+              }
+            }
+            .purchase-order {
+              margin-top: 15px;
+              margin-bottom: 15px;
+              li {
+                margin-top: 5px;
+                font-size: 18px;
+              }
+            }
+          }
+        
+          .lo-ticket-download {
+            padding-top: 50px;
+            text-align: center;
+            h4 {
+              font-weight: bold;
+              font-size: 24px;
+              margin-top: 15px;
+              margin-bottom: 15px;
+            }
+            .qr-wrap {
+              display: flex;
+              gap: 40px;
+              justify-content: center;
+              margin-bottom: 15px;
+              .each-qr {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .qr-img {
+                  margin-bottom: 10px;
+                }
+                span {
+                  border-radius: 20px;
+                  border: 1px solid rgba(0, 0, 0, 0.144);
+                  padding: 5px 10px;
+                  font-size: 14px;
+                }
+              }
+            }
+          }
+        }
+        .quick-link-btn:hover {
+          background-color: $Moss-Green-Light;
+        }
+        .quick-link-btn.enabled {
+          cursor: pointer;
+          opacity: 1;
+        }
+      }
+    }
+    .notice-accordion-wrap {
+      .go-reservation  {
+        font-family: $Highlight-Font;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px; 
+        width: 240px;
+        height: 50px;
+        margin: 50px auto;
+        border-radius: 50px;
+        background-color: rgba($color: $Sunset-Orange, $alpha: 0.7);
+        color: $White;
+        font-weight: bold;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        &.ja{
+          font-family: $Highlight-Jp;
+        }
+        &:hover {
+          background-color: darken($Sunset-Orange, 10%);
+        }
+        span {
+          display: inline-block;
+        }
+        i {
+          font-size: 25px;
+          font-weight: bold;
+        }
+      }
+      .notice-accordion-item {
+        width: 100%;
+        .notice-accordion-title {
+          height: 75px;
+          background-color: $Banana;
+          font-size: $h4-px;
+          box-sizing: border-box;
+          padding: 20px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          cursor: pointer;
+          margin-top: 15px;
+          &:hover {
+            background-color: rgba($color: $Sunset-Orange, $alpha: 0.5);
+          }
+          &.active {
+            color: $White;
+            background-color: $Sunset-Orange;
+            font-weight: bold;
+          }
+          i {
+            transition: transform 0.3s ease;
+            font-size: 20px;
+          }
+          &.active i {
+            transform: rotate(180deg); 
+          }
+        }
+        .notice-accordion-content {
+          max-height: 0;
+          overflow: hidden;
+          padding: 0 20px; 
+          opacity: 0;
+          background-color: $Banana;
+          visibility: hidden;
+          transition: max-height 0.5s ease, opacity 0.3s ease, visibility 0.3s ease;
+          line-height: 150%;
+          p{
+            line-height: 150%;
+          }
+          ul {
+            list-style: disc;
+            padding-left: 20px;
+            li {
+              margin-bottom: 10px;
+              list-style: disc;
+              & ul {
+                & li{
+                  list-style: circle;
+                  padding-left: 20px;
+                }
+              }
+              a {
+                color: inherit;
+                text-decoration: underline;
+                color: rgba($color: $Main-Text, $alpha: 0.7);
+                &:hover{
+                  color: $Main-Text;
+                }
+              }
+            }
+          }
+        }
+        &.active .notice-accordion-content {
+          padding: 20px;
+          display: block;
+          max-height: 1000px;
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+    .museum-load {
+      margin-top: 100px;
+      .load-address {
+        h3 {
+          font-size: 40px;
+          font-weight: bold;
+        }
+        span {
+          font-size: 24px;
+          margin-top: 10px;
+          margin-bottom: 30px;
+          display: block;
+        }
+      }
+      .load-map {
+        box-sizing: border-box;
+        width: 100%;
+        height: 500px;
+        border: none;
+        overflow: hidden;
+      }
+      .load-way {
+        margin-top: 20px;
+        display: flex;
+        gap: 20px;
+        .public-transportation {
+          flex: 2;
+          background: $Banana;
+          padding: 20px;
+          box-sizing: border-box;
+          display: flex;        
+          flex-direction: column;
+          h4 {
+            font-size: 24px;
+            font-weight: bold;
+          }
+          .way-title-wrap {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            align-items: stretch;
+            .train,
+            .bus,
+            .car {
+              box-sizing: border-box;
+              padding: 20px;
+              flex: 1;
+              h5 {
+                font-size: 20px;
+                font-weight: bold;
+              }
+              span {
+                display: block;
+                margin-top: 10px;
+                line-height: 150%;
+              }
+            }
+            .divide {
+              width: 1px;
+              background-color: rgba($color: $Sunset-Orange, $alpha: 0.5);
+              margin: 0 10px; 
+            }
+          }
+        }
+        .private-car {
+          flex: 1;
+          background: $Banana;
+          padding: 20px;
+          box-sizing: border-box;
+          display: flex;        
+          flex-direction: column;
+          h4 {
+            font-size: 24px;
+            font-weight: bold;
+          }
+          .way-title-wrap {
+            .car {
+              padding: 20px;
+              h5 {
+                font-size: 20px;
+                font-weight: bold;
+              }
+              span {
+                display: block;
+                margin-top: 10px;
+                line-height: 150%;
+              }
+            }
+          }
+          .more-notice {
+            margin-top: auto;      
+            align-self: center;
+            ul {
+              align-items: center;
+              box-sizing: border-box;
+              font-size: 13px;
+              padding: 10px; 
+              li {
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+      .approach-measures {
+        margin: 50px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px; 
+        width: 430px;
+        height: 60px;
+        border-radius: 50px;
+        background-color: rgba($color: $Sunset-Orange, $alpha: 0.7);
+        color: $White;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        h3 {
+          font-family: $Highlight-Font;
+          font-size: 30px;
+          &.ja{
+            font-family: $Highlight-Jp;
+            font-size: 25px;
+          }
+        }
+        .bi {
+          font-size: 25px;
+        }
+
+        &:hover {
+          background-color: darken($Sunset-Orange, 10%);
+        }
+      }
+    }
+}
+/* museum-en */
+.header-include{
+  &.ghibli-museum-header-en{
+    position: relative;
+    z-index: 9999;
+    background: rgba($color: $Sunset-Orange, $alpha: 0.1);
+    border-bottom: 1px solid rgba($color: $Sunset-Orange, $alpha: 0.5);
+  .header{
+    .logo-black{
+      img{
+        filter: invert(86%) sepia(8%) saturate(5451%) hue-rotate(317deg) brightness(97%) contrast(94%);
+      }
+    }
+    .header-box{
+      .search-box{
+        label{
+          position: relative;
+          input{
+            border: 3px solid $Sunset-Orange;
+            &::placeholder{}
+          }
+          button{
+            i{color: $Sunset-Orange;}
+          }
+        }
+      }
+      .global-btn{
+        i{color: $Sunset-Orange;}
+      }
+      .hamburger-btn{
+        i{color: $Sunset-Orange;}
+      }
+    }
+  }
+  .global-list{
+    ul{
+      li{
+        &::after{}
+        a{}
+      }
+    }
+  }
+  .sub-wrap{
+    color: $White;
+    background-color: rgba($color: $Sunset-Orange, $alpha: 0.9);
+    .close-btn{
+      i{color: $White;}
+    }
+    .sub-menu-inner{
+      .sub-menu-items{
+        .sub-menu-item{
+          .sub-menu-title{
+            h2{
+              font-size: 30px;
+              display: block;
+              &::after{background-color: #f9cea7;}
+              &::before{background-color: #f9cea7;}
+            }
+          }
+          .sub-menu-content{
+            .sub-menu-content-item{
+              a{
+                font-size: 20px;
+                color: $White;
+                &:hover{
+                  background: url(../images/main-hover-paint-white.png) no-repeat cover;
+                  background-size: contain;
+                  color: $Sunset-Orange;
+                  font-weight: bold;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  }
+}
+.museum-en{
+  background-color: rgba($color: $Sunset-Orange, $alpha: 0.1);
+  .ghibli-inner{
+    /* museum-main */
+    .museum-main {
+      margin-top: 55px;
+      text-align: center; 
+      .museum-big-logo {
+        img {
+          width: 600px;
+          height: 120px;
+          display: inline-block;
+        }
+      }
+      .official-web {
+        margin: 30px auto 0;
+        width: 250px;
+        height: 60px;
+        background: rgba($color: $Sunset-Orange, $alpha: 0.7);
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover{
+          background: $Sunset-Orange;
+        }
+        h3 {
+          font-family: $Highlight-Font;
+          font-size: 30px;
+          color: $White;
+          margin: 0;
+        }
+      }
+    }
+    /* info */
+    .museum-info {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+      background: $White;
+      border-radius: 15px;
+      padding: 70px;
+      margin-top: 80px;
+      .museum-intro,
+      .museum-time,
+      .museum-next-ticket {
+        width: 100%;
+        max-width: 800px;
+        text-align: center;
+        h3 {
+          font-size: $h3-px;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+        span {
+          font-size: $h5-px;
+          line-height: 1.5;
+        }
+        p {
+          font-size: $h5-px;
+          margin-top: 20px;
+        }
+      }
+      .museum-time {
+        .time-detail {
+          display: flex;
+          justify-content: center;
+          max-width: 200px;
+          margin: 0 auto 10px;
+          }
+          .time {
+            flex-shrink: 0;
+            font-size: $h5-px;
+          }
+        }
+        .time-detail:last-child .day::after {
+          content: "";
+        }
+        .closed-day {
+          p {
+            text-align: center;
+            font-style: italic;
+            margin-top: 30px;
+          }
+        }
+      }
+      .museum-next-ticket{
+        h3{
+          color: $Sunset-Orange;
+        }
+        div{
+          font-size: $h3-px;
+          font-weight: bold;
+        }
+      }
+      .divider {
+        width: 100%;
+        max-width: 800px;
+        height: 2px;
+        background-color: rgba($color: $Sunset-Orange, $alpha: 0.7);
+      }
+    }
+    .museum-ticket {
+      margin-top: 110px;
+      & h3 {
+        font-size: 40px;
+        font-weight: bold;
+        margin-bottom: 25px;
+      }
+        .ticket-wrap {
+          display: flex;
+          justify-content: space-between;
+          .ticket01 {
+            box-sizing: border-box;
+            padding: 30px 50px;
+            background: url(../images/ticket-background-me.png) no-repeat center center;
+            background-size: cover;  
+            width: 564px;
+            height: 793px;
+            .divider {
+              width: 1px;
+              height: 700px; 
+              background-color: rgba($color: $Sunset-Orange, $alpha: 0.5); 
+              margin: 0 20px; 
+              align-self: center;
+            }
+          h2 {
+            font-family: $Highlight-Font;
+            font-size: 40px;
+          }
+          .ticket-detail-wrap {
+            .ticket-detail {
+              &:nth-child(1) h3 {
+                &::after{
+                  display: none;
+                }
+              }
+              &:nth-child(2) h3 {
+                padding-top: 50px;
+              }
+              h3 {
+                padding-top: 60px;
+                font-size: 32px;
+                font-weight: bold;
+                position: relative;
+                padding-bottom: 8px;
+                margin-bottom: 15px;
+                &::after {
+                  content: "";
+                  position: absolute;
+                  bottom: -5px;
+                  left: 0;
+                  width: 100%;
+                  height: 2px;
+                  background-color: $Sunset-Orange;
+                }
+              }
+              .wrap {
+                display: flex;
+                flex-direction: column;
+                gap: 0;         
+                width: 100%;
+                box-sizing: border-box;
+                position: relative;
+                margin-bottom: 15px; 
+                border: none;
+                align-items: flex-start;   
+                text-align: left;  
+                h3 {
+                  margin-left: 0;
+                  text-align: left;   
+                  margin-bottom: -40px;   
+                }
+                span {
+                  margin-bottom: 15px;
+                  color: $Sunset-Orange;
+                  text-align: left;      
+                }
+                &::after {
+                  content: "";
+                  position: absolute;
+                  bottom: 0;     
+                  left: 0;
+                  width: 100%;   
+                  height: 2px;   
+                  background-color: $Sunset-Orange; 
+                }
+              }
+              .ticket-age {
+                display: flex;
+                justify-content: space-between;
+                span {
+                  font-size: $h4-px;
+                  line-height: 1.5;
+                }
+              }
+            }
+            .ticket-barcode {
+              display: flex;
+              align-items: center;
+              flex-direction: column;
+              .park-mini-logo {
+                margin-top: 50px;
+                font-size: $h4-px;
+                font-weight: bold;
+              }
+              .barcode-img {
+                img {
+                  max-width: 100%;
+                  height: auto;
+                  display: block;
+                }
+              }
+            }
+          }
+        }
+        .ticket02 {
+          box-sizing: border-box;
+          padding: 30px 50px;
+          background: url(../images/ticket-background-me.png) no-repeat center center;
+          background-size: cover;  
+          width: 564px;
+          height: 793px;
+          h2 {
+            font-family: $Highlight-Font;
+            font-size: 40px;
+            margin-bottom: 20px;
+          }
+          .explan-reservation {
+            box-sizing: border-box;
+            background: $White;
+            width: 465px;
+            height: 110px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px $Sunset-Orange;
+            display: flex;           
+            justify-content: center;   
+            align-items: center;   
+            text-align: center;      
+            padding: 10px 15px;
+            font-size: 18px;
+            br{display: none;}    
+          }
+          .lo-ticket-site {
+            padding-top: 70px;
+            text-align: center;
+            h4 {
+              font-weight: bold;
+              font-size: 24px;
+              padding-bottom: 10px;
+            }
+            .lo-web {
+              display: block;
+              width: 155px; height: 40px;
+              line-height: 40px;
+              background: $White;
+              box-shadow: 0 0 10px $Sunset-Orange;
+              font-size: 20px;
+              margin: auto;
+              border-radius: 30px;
+              &:hover{
+                background-color: $Sunset-Orange;
+                color: $White;
+              }
+            }
+            .purchase-order {
+              margin-top: 15px;
+              margin-bottom: 15px;
+              li {
+                margin-top: 5px;
+                font-size: 18px;
+              }
+            }
+          }
+        
+          .lo-ticket-download {
+            padding-top: 50px;
+            text-align: center;
+            h4 {
+              font-weight: bold;
+              font-size: 24px;
+              margin-top: 15px;
+              margin-bottom: 15px;
+            }
+            .qr-wrap {
+              display: flex;
+              gap: 40px;
+              justify-content: center;
+              margin-bottom: 15px;
+              .each-qr {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .qr-img {
+                  margin-bottom: 10px;
+                }
+                span {
+                  border-radius: 20px;
+                  border: 1px solid rgba(0, 0, 0, 0.144);
+                  padding: 5px 10px;
+                  font-size: 14px;
+                }
+              }
+            }
+          }
+        }
+        .quick-link-btn:hover {
+          background-color: $Moss-Green-Light;
+        }
+        .quick-link-btn.enabled {
+          cursor: pointer;
+          opacity: 1;
+        }
+      }
+    }
+    .notice-accordion-wrap {
+      .go-reservation  {
+        font-family: $Highlight-Font;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px; 
+        width: 280px;
+        height: 50px;
+        margin: 50px auto;
+        border-radius: 50px;
+        background-color: rgba($color: $Sunset-Orange, $alpha: 0.7);
+        color: $White;
+        font-weight: bold;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        &:hover {
+          background-color: darken($Sunset-Orange, 10%);
+        }
+        span {
+          display: inline-block;
+        }
+        i {
+          font-size: 25px;
+          font-weight: bold;
+        }
+      }
+      .notice-accordion-item {
+        width: 100%;
+        .notice-accordion-title {
+          height: 75px;
+          background-color: $Banana;
+          font-size: $h4-px;
+          box-sizing: border-box;
+          padding: 20px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          cursor: pointer;
+          margin-top: 15px;
+          &:hover {
+            background-color: rgba($color: $Sunset-Orange, $alpha: 0.5);
+          }
+          &.active {
+            color: $White;
+            background-color: $Sunset-Orange;
+            font-weight: bold;
+          }
+          i {
+            transition: transform 0.3s ease;
+            font-size: 20px;
+          }
+          &.active i {
+            transform: rotate(180deg); 
+          }
+        }
+        .notice-accordion-content {
+          max-height: 0;
+          overflow: hidden;
+          padding: 0 20px; 
+          opacity: 0;
+          background-color: $Banana;
+          visibility: hidden;
+          transition: max-height 0.5s ease, opacity 0.3s ease, visibility 0.3s ease;
+          p{}
+          ul {
+            list-style: disc;
+            padding-left: 20px;
+            li {
+              margin-bottom: 10px;
+              list-style: disc;
+              & ul {
+                & li{
+                  list-style: circle;
+                  padding-left: 20px;
+                }
+              }
+              a {
+                color: inherit;
+                text-decoration: underline;
+                color: rgba($color: $Main-Text, $alpha: 0.7);
+                &:hover{
+                  color: $Main-Text;
+                }
+              }
+            }
+          }
+        }
+        &.active .notice-accordion-content {
+          padding: 20px;
+          display: block;
+          max-height: 1000px;
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+    .museum-load {
+      margin-top: 100px;
+      .load-address {
+        h3 {
+          font-size: 40px;
+          font-weight: bold;
+        }
+        span {
+          font-size: 24px;
+          margin-top: 10px;
+          margin-bottom: 30px;
+          display: block;
+        }
+      }
+      .load-map {
+        box-sizing: border-box;
+        width: 100%;
+        height: 500px;
+        border: none;
+        overflow: hidden;
+      }
+      .load-way {
+        margin-top: 20px;
+        display: flex;
+        gap: 20px;
+        .public-transportation {
+          flex: 2;
+          background: $Banana;
+          padding: 20px;
+          box-sizing: border-box;
+          display: flex;        
+          flex-direction: column;
+          h4 {
+            font-size: 24px;
+            font-weight: bold;
+          }
+          .way-title-wrap {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            align-items: stretch;
+            .train,
+            .bus,
+            .car {
+              box-sizing: border-box;
+              padding: 20px;
+              flex: 1;
+              h5 {
+                font-size: 20px;
+                font-weight: bold;
+              }
+              span {
+                display: block;
+                margin-top: 10px;
+              }
+            }
+            .divide {
+              width: 1px;
+              background-color: rgba($color: $Sunset-Orange, $alpha: 0.5);
+              margin: 0 10px; 
+            }
+          }
+        }
+        .private-car {
+          flex: 1;
+          background: $Banana;
+          padding: 20px;
+          box-sizing: border-box;
+          display: flex;        
+          flex-direction: column;
+          h4 {
+            font-size: 24px;
+            font-weight: bold;
+          }
+          .way-title-wrap {
+            .car {
+              padding: 20px;
+              h5 {
+                font-size: 20px;
+                font-weight: bold;
+              }
+              span {
+                display: block;
+                margin-top: 10px;
+              }
+            }
+          }
+          .more-notice {
+            margin-top: auto;      
+            align-self: center;
+            ul {
+              align-items: center;
+              box-sizing: border-box;
+              font-size: 13px;
+              padding: 10px; 
+              li {
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+      .approach-measures {
+        margin: 50px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px; 
+        width: 690px;
+        height: 60px;
+        border-radius: 50px;
+        background-color: rgba($color: $Sunset-Orange, $alpha: 0.7);
+        color: $White;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        h3 {
+          font-family: $Highlight-Font;
+          font-size: 30px;
+        }
+        .bi {
+          font-size: 25px;
+        }
+
+        &:hover {
+          background-color: darken($Sunset-Orange, 10%);
+        }
+      }
+    }
+}
+
+@media (max-width:768px) {
+  .ghibli-park-wrap{
+    .ghibli-inner{
+      .park-main{
+        .park-big-logo{
+          img{}
+        }
+        .official-web{
+          h3{}
+        }
+      }
+      .park-info{
+        .park-intro{
+          h3{}
+          span{
+            br {
+              display: none;
+            }
+          }
+        }
+        .park-time{
+          h3{}
+          .time-detail{
+            span{}
+          }
+          .closed-day{
+            span{}
+          }
+        }
+        .park-next-ticket{
+          h3{}
+          span{}
+        }
+      }
+      .park-ticket{
+        h3{}
+        .ticket-wrap{
+          margin-left: 0;
+          flex-direction: column;
+          gap: 20px;
+          .ticket01{
+            background-size: 120%;
+            width: 100%;
+            h2{}
+            .ticket-detail-wrap{
+              .ticket-detail{
+                h3{}
+                .ticket-age{
+                  span{}
+                }
+              }
+              .ticket-barcode{
+                .facilities-img{
+                  img{}
+                }
+                .park-mini-logo{}
+                .barcode-img{
+                  img{}
+                }
+              }
+            }
+          }
+          .go-reservation{
+            h5{}
+            .bi{}
+          }
+        }
+      }
+      .notice-accordion-wrap{
+        .notice-accordion-item{
+          .notice-accordion-title{
+            h5{}
+            .bi{}
+          }
+          .notice-accordion-content{
+            p{
+              ul{
+                li{
+                  a{}
+                }
+              }
+            }
+          }
+        }
+        
+      }
+      .park-load{
+        .load-address{
+          h3{}
+          span{}
+        }
+        .load-map{}
+        .load-way{
+          flex-direction: column;
+          .public-transportation{
+            h4{}
+            .way-title-wrap{
+              .train{
+                h5{}
+                span{}
+              }
+              .bus{
+                h5{}
+                span{}
+              }
+            }
+            .more-notice{
+              ul{
+                li{}
+              }
+            }
+          }
+          .private-car{
+            h4{
+              .way-title-wrap{
+                .car{
+                  h5{}
+                  span{}
+                }
+              }
+              .more-notice{
+                ul{
+                  li{}
+                }
+              }
+            }
+          }
+        }
+        .approach-measures{
+          h3{}
+          .bi{}
+        }
+      }
+    }
+  }
+  .ghibli-museum-wrap{
+    .ghibli-inner{
+      .museum-main{
+        .museum-big-logo{
+          img{}
+        }
+        .official-web{
+          h3{}
+        }
+      }
+      .museum-info{
+        .museum-intro{
+          h3{}
+          span{
+            br {
+              display: none;
+            }
+          }
+        }
+        .museum-time{
+          h3{}
+          .time-detail{
+            span{}
+          }
+          .closed-day{
+            span{}
+          }
+        }
+        .museum-next-ticket{
+          h3{}
+          span{}
+        }
+      }
+      .museum-ticket{
+        h3{}
+        .ticket-wrap{
+          margin-left: 60px;
+          flex-direction: column;
+          gap: 20px;
+          .ticket01{
+            h2{}
+            .ticket-detail-wrap{
+              .ticket-detail{
+                h3{}
+                .ticket-age{
+                  span{}
+                }
+              }
+              .ticket-barcode{
+                .facilities-img{
+                  img{}
+                }
+                .park-mini-logo{}
+                .barcode-img{
+                  img{}
+                }
+              }
+            }
+          }
+          .go-reservation{
+            h5{}
+            .bi{}
+          }
+        }
+      }
+      .notice-accordion-wrap{
+        .notice-accordion-item{
+          .notice-accordion-title{
+            h5{}
+            .bi{}
+          }
+          .notice-accordion-content{
+            p{
+              ul{
+                li{
+                  a{}
+                }
+              }
+            }
+          }
+        }
+        
+      }
+      .museum-load{
+        .load-address{
+          h3{}
+          span{}
+        }
+        .load-map{}
+        .load-way{
+          flex-direction: column;
+          .public-transportation{
+            h4{}
+            .way-title-wrap{
+              .train{
+                h5{}
+                span{}
+              }
+              .bus{
+                h5{}
+                span{}
+              }
+            }
+            .more-notice{
+              ul{
+                li{}
+              }
+            }
+          }
+          .private-car{
+            h4{
+              .way-title-wrap{
+                .car{
+                  h5{}
+                  span{}
+                }
+              }
+              .more-notice{
+                ul{
+                  li{}
+                }
+              }
+            }
+          }
+        }
+        .approach-measures{
+          h3{}
+          .bi{}
+        }
+      }
+    }
+  }
+}
+@media (max-width: 400px) {
+  .ghibli-park-wrap{
+    .ghibli-inner{
+      .park-main{
+        .park-big-logo{
+          img{width: 100%; height: 100%;}
+        }
+        .official-web{
+          width: 50%;
+          height: 40px;
+          h3{
+            font-size: 24px;
+          }
+        }
+      }
+      .park-info{
+        .park-intro{
+          h3{}
+          span{
+            br {
+            }
+          }
+        }
+        .park-time{
+          h3{}
+          .time-detail{
+            span{}
+          }
+          .closed-day{
+            span{}
+          }
+        }
+        .park-next-ticket{
+          h3{}
+          span{}
+        }
+      }
+      .park-ticket{
+        h3{font-size: 30px;}
+        .ticket-wrap{
+          margin-left: 0;
+          flex-direction: column;
+          gap: 20px;
+          .ticket01{
+            width: 100%;
+            height: 85%;
+            padding: 15px;
+            h2{font-size: 30px;}
+            .ticket-detail-wrap{
+              .ticket-detail{
+                h3{font-size: 27px;}
+                .ticket-age{
+                  span{}
+                }
+              }
+              .ticket-barcode{
+                .facilities-img{
+                  a{
+                    img{
+                      width: 35px;
+                      &.facili02{
+                        margin-top: 1px;
+                      }
+                      &.facili05{
+                        margin-top: 3px;
+                        width: 40px;
+                      }
+                    }
+                  }
+                }
+                .park-mini-logo{}
+                .barcode-img{
+                  img{width: 60%; margin: auto; display: block;}
+                }
+              }
+            }
+          }
+          
+        }
+      }
+      .notice-accordion-wrap{
+        .go-reservation {            
+            width: 60%;
+            height: 40px;
+            margin: 20px auto;
+            span {
+              font-size: 24px;
+            }
+            .bi {
+              font-size: 20px;
+            }
+          }
+        .notice-accordion-item{
+          .notice-accordion-title{
+            h5{}
+            .bi{}
+          }
+          .notice-accordion-content{
+            p{
+              ul{
+                li{
+                  a{}
+                }
+              }
+            }
+          }
+        }
+        
+      }
+      .park-load{
+        .load-address{
+          h3{font-size: 30px;}
+          span{font-style: 24px;}
+        }
+        .load-map{}
+        .load-way{
+          flex-direction: column;
+          .public-transportation{
+            h4{}
+            .way-title-wrap{
+              display: flex;
+              flex-direction: column;
+              .train{
+                border-bottom: 1px solid $Moss-Green;
+                h5{}
+                span{}
+              }
+              .bus{
+                h5{}
+                span{}
+              }
+            }
+            .more-notice{
+              ul{
+                li{}
+              }
+            }
+          }
+          .private-car{
+            h4{
+              .way-title-wrap{
+                .car{
+                  h5{}
+                  span{}
+                }
+              }
+              .more-notice{
+                ul{
+                  li{}
+                }
+              }
+            }
+          }
+        }
+        .approach-measures{
+          width: 90%; height: 40px;
+          h3{font-size: 24px;}
+          .bi{font-size: 20px;}
+        }
+      }
+    }
+  }
+  .ghibli-museum-wrap{
+    .ghibli-inner{
+      .museum-main{
+        .museum-big-logo{
+          img{width: 100%; height: 100%;}
+        }
+        .official-web{
+          width: 50%;
+          height: 40px;
+          h3{
+            font-size: 24px;
+          }
+        }
+      }
+      .museum-info{
+        .museum-intro{
+          h3{}
+          span{
+            br {
+              display: none;
+            }
+          }
+        }
+        .museum-time{
+          h3{}
+          .time-detail{
+            span{}
+          }
+          .closed-day{
+            span{}
+          }
+        }
+        .museum-next-ticket{
+          h3{}
+          span{}
+        }
+      }
+      .museum-ticket{
+        h3{font-size: 30px;}
+        & .ticket-wrap{
+          margin-left: 0;
+          flex-direction: column;
+          gap: 20px;
+          .ticket01{
+            width: 100%;
+            height: 85%;
+            padding: 15px;
+            h2{font-size: 31px;}
+            .ticket-detail-wrap{
+              .ticket-detail{
+                .wrap{
+                  h3{font-size: 27px;}
+                  span{font-size: 12px; 
+                    br{display: none;}
+                  }
+                }
+                .ticket-age{
+                  span{}
+                }
+              }
+              .ticket-barcode{
+                .park-mini-logo{}
+                .barcode-img{
+                  img{width: 60%; margin: auto; display: block;}
+                }
+              }
+            }
+          }
+          .ticket02 {
+            width: 100%;
+            height: 85%;
+            padding: 15px;
+            h2{font-size: 31px;}
+            .explan-reservation { 
+              width: 100%;  
+              br{display: none;}
+            }
+            .lo-ticket-site {
+              h4 {
+              }
+              .lo-web {
+                &:hover{
+                }
+              }
+              .purchase-order {
+                li {
+                  
+                }
+              }
+            }
+            .lo-ticket-download {
+              h4 {
+              }
+              .qr-wrap {
+                gap: 10px;
+                .each-qr {
+                  .qr-img {
+                    width: 80%;
+                  }
+                  span {
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .notice-accordion-wrap{
+        .go-reservation {            
+            width: 60%;
+            height: 40px;
+            margin: 20px auto;
+            span {
+              font-size: 24px;
+            }
+            .bi {
+              font-size: 20px;
+            }
+          }
+        .notice-accordion-item{
+          .notice-accordion-title{
+            h5{}
+            .bi{}
+          }
+          .notice-accordion-content{
+            p{
+              ul{
+                li{
+                  a{}
+                }
+              }
+            }
+          }
+        }
+        
+      }
+      .museum-load{
+        .load-address{
+          h3{font-size: 30px;}
+          span{font-style: 24px;}
+        }
+        .load-map{}
+        .load-way{
+          flex-direction: column;
+          .public-transportation{
+            h4{}
+            .way-title-wrap{
+              display: flex;
+              flex-direction: column;
+              .train{
+                border-bottom: 1px solid $Moss-Green;
+                h5{}
+                span{}
+              }
+              .bus{
+                h5{}
+                span{}
+              }
+            }
+            .more-notice{
+              ul{
+                li{}
+              }
+            }
+          }
+          .private-car{
+            h4{
+              .way-title-wrap{
+                .car{
+                  h5{}
+                  span{}
+                }
+              }
+            }
+          }
+        }
+        .approach-measures{
+          width: 90%; height: 40px;
+          h3{font-size: 24px;}
+          .bi{font-size: 20px;}
+        }
+      }
+    }
+  }
+  .studio-wrap {
+    flex-direction: column ; 
+    .side {
+      width: 100% ;
+      height: 50vh ;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        max-width: 80%;
+        height: auto;
+        display: block;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+  <title>ジブリイベント | スタジオジブリ</title>
+
+  <!-- favicon -->
+  <link rel="icon" href="../images/favicon.png">
+
+  <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  
+  
+  <!-- bootstrap icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  
+
+  <!-- style -->
+  <!-- css 연결해주세요 -->
+  <link rel="stylesheet" href="../css/text-animation.css">
+  <link rel="stylesheet" href="../css/responsive-mobile.css">
+  
+</head>
+
+
+<body>
+  <!---------------- header ---------------->
+  <div class="header-include"></div>
+
+  <!---------------- banner ---------------->
+  <section class="banner">
+    <div class="header-banner">
+      <div class="header-banner-title">
+        <div class="each-title-wrap01 ja">
+          <span><b class="each-title point01">#</b>風の谷のナウシカ </span>
+          <span><b class="each-title point02">#</b>天空の城ラピュタ </span>
+          <span><b class="each-title point03">#</b>火垂るの墓 </span>
+          <span><b class="each-title point04">#</b>となりのトトロ </span>
+          <span><b class="each-title point01">#</b>魔女の宅急便 </span>
+          <span><b class="each-title point02">#</b>おもひでぽろぽろ </span>
+          <span><b class="each-title point03">#</b>紅の豚 </span>
+          <span><b class="each-title point04">#</b>海がきこえる </span>
+          <span><b class="each-title point01">#</b>平成狸合戦ぽんぽこ </span>
+          <span><b class="each-title point02">#</b>On Your Mark </span>
+          <span><b class="each-title point03">#</b>耳をすませば </span>
+          <span><b class="each-title point04">#</b>もののけ姫 </span>
+          <span><b class="each-title point01">#</b>ホーホケキョ となりの山田くん </span>
+          <span><b class="each-title point02">#</b>千と千尋の神隠し </span>
+          <span><b class="each-title point03">#</b>ギブリーズ episode2 </span>
+          <span><b class="each-title point04">#</b>猫の恩返し </span>
+          <span><b class="each-title point01">#</b>ハウルの動く城 </span>
+          <span><b class="each-title point02">#</b>ゲド戦記 </span>
+          <span><b class="each-title point03">#</b>崖の上のポニョ </span>
+        </div>
+        <div class="each-title-wrap02 ja">
+          <span><b class="each-title point04">#</b>君たちはどう生きるか </span>
+          <span><b class="each-title point02">#</b>アーヤと魔女 </span>
+          <span><b class="each-title point01">#</b>レッドタートル ある島の物語 </span>
+          <span><b class="each-title point02">#</b>思い出のマーニー </span>
+          <span><b class="each-title point01">#</b>かぐや姫の物語 </span>
+          <span><b class="each-title point03">#</b>風立ちぬ </span>
+          <span><b class="each-title point03">#</b>コクリコ坂から </span>
+          <span><b class="each-title point04">#</b>借りぐらしのアリエッティ </span>
+          <span><b class="each-title point03">#</b>崖の上のポニョ </span>
+          <span><b class="each-title point04">#</b>ゲド戦記 </span>
+          <span><b class="each-title point02">#</b>ハウルの動く城 </span>
+          <span><b class="each-title point03">#</b>猫の恩返し </span>
+          <span><b class="each-title point01">#</b>ギブリーズ episode2 </span>
+          <span><b class="each-title point02">#</b>千と千尋の神隠し </span>
+          <span><b class="each-title point02">#</b>ホーホケキョ となりの山田くん </span>
+          <span><b class="each-title point01">#</b>もののけ姫 </span>
+          <span><b class="each-title point03">#</b>耳をすませば </span>
+          <span><b class="each-title point04">#</b>On Your Mark </span>
+          <span><b class="each-title point01">#</b>平成狸合戦ぽんぽこ </span>
+        </div>
+      </div>
+      <div class="header-banner-inner">
+        <h2 class="banner-title ja">
+          ジブリイベント
+        </h2>
+        <img src="../images/sub-mainvisual03.png" alt="totoro">
+      </div>
+    </div>
+    <ul class="breadcrumb">
+      <li><a href="../index.html"><i class="bi bi-house-fill"></i></a></li>
+      <li><i class="bi bi-chevron-right"></i></li>
+      <li><a href="#">ジブリイベント</a></li>
+    </ul>
+  </section> 
+  <!-- 서브페이지 이너 배너 -->
+
+  <!---------------- main ---------------->
+  <section class="ghibli-event">
+    <div class="event-inner">
+      <div class="calendar-container">
+        <div class="header">
+          <button id="prevMonthBtn">◀</button>
+          <h2 id="monthTitle">六月</h2>
+          <button id="nextMonthBtn">▶</button>
+        </div>
+        <div class="weekdays">
+          <div>日</div>
+          <div>月</div>
+          <div>火</div>
+          <div>水</div>
+          <div>木</div>
+          <div>金</div>
+          <div>土</div>
+        </div>
+        <div class="calendar" id="calendar"></div>
+      </div>
+      <div class="events-section-items" id="eventsSection">
+        <div class="events-title-box">
+          <span class="ing-event">進行中</span>
+          <span class="end-event">終了</span>
+        </div>
+        <div class="event-big-box">
+          <p id="defaultMessage">
+            <i class="bi bi-calendar-event"></i><br>
+            カレンダーに日時を選択してください。<br>
+          <em>選択した日時に開催中のイベント情報を教えてあげます。</em></p>
+          <div id="eventCards" style="display: none;">
+            <div class="event-section-item">
+            <div class="event-card">
+              <div class="card-img">
+                <img src="../images/event-content01.png" alt="">
+                <span>進行中</span>
+              </div>
+              <div class="card-content">
+                <div class="card-content-title">
+                  <h2>ジブリの立体造型物展</h2> 
+                  <span>#海を渡った熱風</span>
+                  <span>#予約制</span>
+                </div>
+                <span>2025.05.27 (火) - 2025.09.23 (火)</span><br>
+                <span>Warehouse TERRADA B&C HALL</span>
+                <p>
+                  80を超える国や地域で公開された映画『君たちはどう生きるか』をはじめ、スタジオジブリ作品は今、世界中で観られています。
+                  その背景には、作品を愛し、長い時間をかけて届けようとしてくれた人々がそれぞれの国や地域にいました。
+                  本展は海外のパートナーがどのように作品を届けていったのかを辿りながら、映画の名場面を立体造型物で紹介していきます。
+                  立体造型物展は2003年に始まった本格的なスタジオジブリ展の原点であり、進化を遂げて22年ぶりに東京に帰ってきます。
+                  『紅の豚』に登場する飛行艇サボイアS-21も登場！
+                  さぁジブリの世界へ飛び込もう。
+                </p>
+                <button class="show-btn ja">展覧会概要</button>
+                <button class="site-btn ja">公式サイト</button>
+              </div> 
+            </div>
+            <div class="event-card">
+              <div class="card-img">
+                <img src="../images/event-content02.png" alt="">
+                <span>進行中</span>
+              </div>
+              <div class="card-content">
+                <div class="card-content-title">
+                  <h2>鈴木敏夫とジブリ展</h2> 
+                  <span>#また、会えたね！</span>
+                  <span>#予約制</span>
+                </div>
+                <span>2025.04.25 (金) - 2025.06.29 (日)</span><br>
+                <span>長野県立美術館</span>
+                <p>
+                  《書籍で紐解く鈴木敏夫》
+                  高畑勲・宮﨑駿両監督と共に、世界を代表する数々のアニメーション映画を世に送り出してきたスタジオジブリ・プロデューサーの鈴木敏夫。
+                  展示では、戦後の名古屋で育ち、昭和から平成、令和の時代を駆け続けている鈴木が「読んできた本」と「その時代背景」に注目します。
+                  子供時代から読んできた漫画や小説、青春時代を経て、社会に出てから今もなお旺盛な好奇心で読み続けている歴史本やノンフィクション、評論本などを通し、鈴木がその作品や作家からどんな影響を受け、自身の思考術へとつなげていったのか、そしてどのように作り手と向き合い、編集者、プロデューサーとしてスタジオジブリ映画を確立していったのか。
+                  この答えを鈴木敏夫の血肉となった8800冊の書籍や映画作品を通じて探ります。
+                </p>
+                <button class="show-btn ja">展覧会概要</button>
+                <button class="site-btn ja">公式サイト</button>
+              </div> 
+            </div>
+            <div class="event-card">
+              <div class="card-img">
+                <img src="../images/event-content03.png" alt="">
+                <span>進行中</span>
+              </div>
+              <div class="card-content">
+                <div class="card-content-title">
+                  <h2>金曜ロードショーとジブリ展</h2> 
+                  <span>#いっしょにみよう。</span>
+                  <span>#予約制</span>
+                </div>
+                <span>2025.04.27 (木) - 2025.07.06 (日)</span><br>
+                <span>長崎県美術館</span>
+                <p>
+                  日本テレビ系の映画番組「金曜ロードショー」のヒストリーを辿りながら、スタジオジブリ作品の魅力を紹介する展覧会を開催します。
+                  1985年に始まった「金曜ロードショー」は、翌86年に「風の谷のナウシカ」（84年、宮﨑駿監督）を初放映*して以来、これまで200回以上にわたってスタジオジブリ作品を放映してきました。その歴史はスタジオジブリが人気を確立し、作品の評価を不動のものとしていく足跡と共にあり、現在も続いています。
+
+                  本展では、放送された時代ごとの記憶と記録を通じて映画の魅力に迫るほか、昭和から平成、令和に至る世相を掘り起こすことで、スタジオジブリ作品が持つ時代性と普遍性を浮かび上がらせます。
+                  また 「風の谷のナウシカ」に登場する"腐海"を表現した空間「風の谷のナウシカ 王蟲の世界」、映画の世界に飛び込めるようなフォトスポットも登場し、スタジオジブリ作品の世界観を楽しめます。
+                  圧倒的なデータベースでタイムスリップする体感型の展覧会をどうぞお見逃しなく！
+                </p>
+                <button class="show-btn ja">展覧会概要</button>
+                <button class="site-btn ja">公式サイト</button>
+              </div> 
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+    <!-- 날씨 위젯 -->
+  <div class="weather-widget">
+    <!-- 작은 위젯 -->
+    <div class="weather-mini" id="weatherMini" onclick="showDetail()">
+      <p>今日の天気</p>
+      <img src="https://openweathermap.org/img/wn/01d@2x.png" alt="날씨 아이콘" />
+      <strong>--℃</strong>
+      <p>LOAD…。</p>
+    </div>
+
+    <!-- 큰 상세 위젯 -->
+    <div class="weather-detail" id="weatherDetail">
+      <div class="weather-header">
+        <span>----</span>
+        <strong>東京の天気</strong>
+        <span>📍---</span>
+        <div class="close-btn" onclick="hideDetail()">✕</div>
+      </div>
+      <div class="weather-body">
+        <img src="https://openweathermap.org/img/wn/01d@2x.png" alt="날씨 아이콘" />
+        <p><strong>最高: --℃</strong> <strong>最低: --℃</strong></p>
+        <p>天気の説明を準備しています。</p>
+        <p>風速情報なし</p>
+        <hr />
+        <div class="weekly-forecast">
+          <div>🌤️<br/>月</div>
+          <div>⛅<br/>火</div>
+          <div>⛅<br/>水</div>
+          <div>☀️<br/>木</div>
+          <div>☁️<br/>金</div>
+          <div>☁️<br/>土</div>
+          <div>☀️<br/>日</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+  <section class="event-modal">
+    <div class="modal-wrap">
+      <button class="close-btn-modal">
+        <i class="bi bi-x-lg"></i>
+      </button>
+      <div class="modal-inner">
+          <!-- Swiper -->
+        <div class="swiper event-modal-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="event-card-modal">
+                <div class="card-img-modal">
+                  <img src="../images/event-content01.png" alt="">
+                  <span>進行中</span>
+                </div>
+                <div class="card-content-modal">
+                  <div class="card-content-title-modal">
+                    <h2>ジブリの立体造型物展</h2> 
+                  </div>
+                  <span>2025.05.27 (火) - 2025.09.23 (火)</span><br>
+                  <span>Warehouse TERRADA B&C HALL</span>
+                  <p>
+                    80を超える国や地域で公開された映画『君たちはどう生きるか』をはじめ、スタジオジブリ作品は今、世界中で観られています。
+                    その背景には、作品を愛し、長い時間をかけて届けようとしてくれた人々がそれぞれの国や地域にいました。
+                    本展は海外のパートナーがどのように作品を届けていったのかを辿りながら、映画の名場面を立体造型物で紹介していきます。
+                    立体造型物展は2003年に始まった本格的なスタジオジブリ展の原点であり、進化を遂げて22年ぶりに東京に帰ってきます。
+                    『紅の豚』に登場する飛行艇サボイアS-21も登場！
+                    さぁジブリの世界へ飛び込もう。
+                  </p>
+                  <button class="show-btn-modal">展覧会概要</button>
+                  <button class="site-btn-modal">公式サイト</button>
+                </div> 
+              </div>
+            </div>
+            <div class="swiper-slide">
+                            <div class="event-card-modal">
+                <div class="card-img-modal">
+                  <img src="../images/event-content02.png" alt="">
+                  <span>進行中</span>
+                </div>
+                <div class="card-content-modal">
+                  <div class="card-content-title-modal">
+                    <h2>鈴木敏夫とジブリ展</h2> 
+                  </div>
+                  <span>2025.04.25 (金) - 2025.06.29 (日)</span><br>
+                  <span>長野県立美術館</span>
+                  <p>
+                    《書籍で紐解く鈴木敏夫》
+                    高畑勲・宮﨑駿両監督と共に、世界を代表する数々のアニメーション映画を世に送り出してきたスタジオジブリ・プロデューサーの鈴木敏夫。
+                    展示では、戦後の名古屋で育ち、昭和から平成、令和の時代を駆け続けている鈴木が「読んできた本」と「その時代背景」に注目します。
+                    子供時代から読んできた漫画や小説、青春時代を経て、社会に出てから今もなお旺盛な好奇心で読み続けている歴史本やノンフィクション、評論本などを通し、鈴木がその作品や作家からどんな影響を受け、自身の思考術へとつなげていったのか、そしてどのように作り手と向き合い、編集者、プロデューサーとしてスタジオジブリ映画を確立していったのか。
+                    この答えを鈴木敏夫の血肉となった8800冊の書籍や映画作品を通じて探ります。
+                  </p>
+                  <button class="show-btn-modal">展覧会概要</button>
+                  <button class="site-btn-modal">公式サイト</button>
+                </div> 
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="event-card-modal">
+                <div class="card-img-modal">
+                  <img src="../images/event-content03.png" alt="">
+                  <span>進行中</span>
+                </div>
+                <div class="card-content-modal">
+                  <div class="card-content-title-modal">
+                    <h2>金曜ロードショーとジブリ展</h2> 
+                  </div>
+                  <span>2025.04.27 (木) - 2025.07.06 (日)</span><br>
+                  <span>長崎県美術館</span>
+                  <p>
+                    日本テレビ系の映画番組「金曜ロードショー」のヒストリーを辿りながら、スタジオジブリ作品の魅力を紹介する展覧会を開催します。
+                    1985年に始まった「金曜ロードショー」は、翌86年に「風の谷のナウシカ」（84年、宮﨑駿監督）を初放映*して以来、これまで200回以上にわたってスタジオジブリ作品を放映してきました。その歴史はスタジオジブリが人気を確立し、作品の評価を不動のものとしていく足跡と共にあり、現在も続いています。
+                    本展では、放送された時代ごとの記憶と記録を通じて映画の魅力に迫るほか、昭和から平成、令和に至る世相を掘り起こすことで、スタジオジブリ作品が持つ時代性と普遍性を浮かび上がらせます。
+                    また 「風の谷のナウシカ」に登場する"腐海"を表現した空間「風の谷のナウシカ 王蟲の世界」、映画の世界に飛び込めるようなフォトスポットも登場し、スタジオジブリ作品の世界観を楽しめます。
+                    圧倒的なデータベースでタイムスリップする体感型の展覧会をどうぞお見逃しなく！
+                  </p>
+                  <button class="show-btn-modal">展覧会概要</button>
+                  <button class="site-btn-modal">公式サイト</button>
+                </div> 
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-content">
+          → スワイプをして、次のイベントを確認してください！
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!---------------- footer ---------------->
+  <div class="footer-include"></div>
+
+  <!---------------- aos ---------------->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+
+  <!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!---------------- js ---------------->
+  <!-- js 연결해주세요... -->
+  <script src="../js/text-animation.js"></script>
+
+</body>
+</html>
