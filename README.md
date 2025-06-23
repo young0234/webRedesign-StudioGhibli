@@ -25,26 +25,6 @@
 <br/>
 <br/>
 
-<details>
-<summary>🇺🇸 English</summary>
-
-# Studio Ghibli  
-Studio Ghibli  
-
-</details>
-   
-<details>
-<summary>🇯🇵 日本語</summary>
-
-# スタジオジブリ  
-スタジオジブリ
-
-</details>  
-
-<br/>
-<br/>
-<br/>
-
 ## 목차
 1. [프로젝트 개요](#1-프로젝트-개요)   
 2. [파일 구성](#2-파일-구성)   
