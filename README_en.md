@@ -1,6 +1,6 @@
 
 ---
-[README](https://github.com/dkssud-dus/webRedesign-StudioGhibli) | [README_en](https://github.com/dkssud-dus/webRedesign-StudioGhibli/blob/main/README_en.md)
+[README](https://github.com/young0234/webRedesign-StudioGhibli) | [README_en](https://github.com/young0234/webRedesign-StudioGhibli/blob/main/README_en.md)
 
 `#RedesignProject` `#Website` `#TeamProject` `#3PeopleTeam` `#Responsive` `#Mobile`
 # **Website Redesign Project Details:**
@@ -98,7 +98,7 @@ The purpose of this project is as follows:
 
 ## 3. Page-wise Features
 
-### 3.1. [Main Page](https://dkssud-dus.github.io/webRedesign-StudioGhibli/index_en.html)
+### 3.1. [Main Page](https://young0234.github.io/webRedesign-StudioGhibli/index_en.html)
 
 ---
 
@@ -324,7 +324,7 @@ The purpose of this project is as follows:
 
 ---
 
-### 3.2.1. [Studio Ghibli Information](https://dkssud-dus.github.io/webRedesign-StudioGhibli/pages_en/ghibli-data-en.html)
+### 3.2.1. [Studio Ghibli Information](https://young0234.github.io/webRedesign-StudioGhibli/pages_en/ghibli-data-en.html)
 ![subpage-company-banner](https://github.com/user-attachments/assets/09ac48f0-9504-45e5-9a46-671e8a19d61b)
 
 <br/>
@@ -353,7 +353,7 @@ The purpose of this project is as follows:
 </br>
 </br>
 
-### 3.2.2. [Notice](https://dkssud-dus.github.io/webRedesign-StudioGhibli/pages_en/ghibli-news-en.html)
+### 3.2.2. [Notice](https://young0234.github.io/webRedesign-StudioGhibli/pages_en/ghibli-news-en.html)
 ![subpage-news-banner](https://github.com/user-attachments/assets/d25938f7-5999-4969-a6e0-a8fc01b7cffa)
 
 <br/>
@@ -384,7 +384,7 @@ The purpose of this project is as follows:
 </br>
 </br>
 
-### 3.2.3. [Event](https://dkssud-dus.github.io/webRedesign-StudioGhibli/pages_en/ghibi-event-en.html)
+### 3.2.3. [Event](https://young0234.github.io/webRedesign-StudioGhibli/pages_en/ghibi-event-en.html)
 ![subpage-event-banner](https://github.com/user-attachments/assets/ed6dfa8d-a62b-4a7a-bdf9-476bc5342643)
 
 <br/>
@@ -428,7 +428,7 @@ The purpose of this project is as follows:
 </br>
 </br>
 
-### 3.2.4. [Movie List](https://dkssud-dus.github.io/webRedesign-StudioGhibli/pages_en/movie-list-en.html)
+### 3.2.4. [Movie List](https://young0234.github.io/webRedesign-StudioGhibli/pages_en/movie-list-en.html)
 ![subpage-movielist-banner](https://github.com/user-attachments/assets/94b940dd-aa11-4d2e-aee7-0c51f329acc9)
 
 <br/>
@@ -458,7 +458,7 @@ The purpose of this project is as follows:
 </br>
 </br>
 
-### 3.2.4.1. [Movie Detail](https://dkssud-dus.github.io/webRedesign-StudioGhibli/pages_en/movie27-en.html)
+### 3.2.4.1. [Movie Detail](https://young0234.github.io/webRedesign-StudioGhibli/pages_en/movie27-en.html)
 ![subpage-movie-banner](https://github.com/user-attachments/assets/44584e19-1dc3-45ec-ab8b-38908a9c24bf)
 
 <br/>
@@ -511,7 +511,7 @@ The purpose of this project is as follows:
 </br>
 </br>
 
-#### 3.2.5. [Ghibli Location](https://dkssud-dus.github.io/webRedesign-StudioGhibli/pages_en/total-ghibli-en.html)
+#### 3.2.5. [Ghibli Location](https://young0234.github.io/webRedesign-StudioGhibli/pages_en/total-ghibli-en.html)
 ![subpage-location](https://github.com/user-attachments/assets/bb4d111e-91ea-4076-8c82-d5cfcfe9da6b)
 
 <br/>
@@ -527,7 +527,7 @@ The purpose of this project is as follows:
 </br>
 </br>
 
-#### 3.2.5.1. [Ghibli Park](https://dkssud-dus.github.io/webRedesign-StudioGhibli/pages_en/ghibli-park-en.html)
+#### 3.2.5.1. [Ghibli Park](https://young0234.github.io/webRedesign-StudioGhibli/pages_en/ghibli-park-en.html)
 ![subpage-park](https://github.com/user-attachments/assets/a6d9e4b1-3b96-4d56-b397-d94b237b8ab5)
 
 <br/>
@@ -545,7 +545,7 @@ The purpose of this project is as follows:
 </br>
 </br>
 
-#### 3.2.5.2. [Ghibli Museum](https://dkssud-dus.github.io/webRedesign-StudioGhibli/pages_en/ghibli-museum-en.html)
+#### 3.2.5.2. [Ghibli Museum](https://young0234.github.io/webRedesign-StudioGhibli/pages_en/ghibli-museum-en.html)
 ![subpage-museum](https://github.com/user-attachments/assets/fc78825e-5491-4a51-8bb5-84dc74776f7f)
 
 <br/>
@@ -563,7 +563,7 @@ The purpose of this project is as follows:
 </br>
 </br>
 
-#### 3.2.6. [Q&A](https://dkssud-dus.github.io/webRedesign-StudioGhibli/pages_en/ghibli-QnA-en.html)
+#### 3.2.6. [Q&A](https://young0234.github.io/webRedesign-StudioGhibli/pages_en/ghibli-QnA-en.html)
 ![subpage-qna-banner](https://github.com/user-attachments/assets/7d43857a-294a-4a20-9ed0-e552e8c294df)
 
 <br/>
