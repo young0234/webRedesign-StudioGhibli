@@ -240,9 +240,9 @@
 ---
 
 ## 3. Read Project Details in Other Languages
-1. [English](https://github.com/dkssud-dus/webRedesign-StudioGhibli/blob/main/README_en.md)
-2. [한국어](https://github.com/dkssud-dus/webRedesign-StudioGhibli/blob/main/README_ko.md)
-3. [日本語](https://github.com/dkssud-dus/webRedesign-StudioGhibli/blob/main/README_ja.md)
+1. [English](https://github.com/young0234/webRedesign-StudioGhibli/blob/main/README_en.md)
+2. [한국어](https://github.com/young0234/webRedesign-StudioGhibli/blob/main/README_ko.md)
+3. [日本語](https://github.com/young0234/webRedesign-StudioGhibli/blob/main/README_ja.md)
 
 </br>
 </br>
@@ -274,15 +274,15 @@
 </br>
 
 #### 4.3.2. Sub Pages
-1. [Studio Ghibli Information](https://dkssud-dus.github.io/webRedesign-StudioGhibli/pages_kr/ghibli-data.html)
-2. [Notice](https://dkssud-dus.github.io/webRedesign-StudioGhibli/pages_kr/ghibli-news.html)
-3. [Ghibli Event](https://dkssud-dus.github.io/webRedesign-StudioGhibli/pages_kr/ghibi-event.html)
-4. [Movie List](https://dkssud-dus.github.io/webRedesign-StudioGhibli/pages_kr/movie-list.html)
-5. [Movie Detail](https://dkssud-dus.github.io/webRedesign-StudioGhibli/pages_kr/movie27.html)
-6. [Ghibli Location](https://dkssud-dus.github.io/webRedesign-StudioGhibli/pages_kr/total-ghibli.html)
-7. [Ghibli Park](https://dkssud-dus.github.io/webRedesign-StudioGhibli/pages_kr/ghibli-park.html)
-8. [Ghibli Museum](https://dkssud-dus.github.io/webRedesign-StudioGhibli/pages_kr/ghibli-museum.html)
-9. [Q&A](https://dkssud-dus.github.io/webRedesign-StudioGhibli/pages_kr/ghibli-QnA.html)
+1. [Studio Ghibli Information](https://young0234.github.io/webRedesign-StudioGhibli/pages_kr/ghibli-data.html)
+2. [Notice](https://young0234.github.io/webRedesign-StudioGhibli/pages_kr/ghibli-news.html)
+3. [Ghibli Event](https://young0234.github.io/webRedesign-StudioGhibli/pages_kr/ghibi-event.html)
+4. [Movie List](https://young0234.github.io/webRedesign-StudioGhibli/pages_kr/movie-list.html)
+5. [Movie Detail](https://young0234.github.io/webRedesign-StudioGhibli/pages_kr/movie27.html)
+6. [Ghibli Location](https://young0234.github.io/webRedesign-StudioGhibli/pages_kr/total-ghibli.html)
+7. [Ghibli Park](https://young0234.github.io/webRedesign-StudioGhibli/pages_kr/ghibli-park.html)
+8. [Ghibli Museum](https://young0234.github.io/webRedesign-StudioGhibli/pages_kr/ghibli-museum.html)
+9. [Q&A](https://young0234.github.io/webRedesign-StudioGhibli/pages_kr/ghibli-QnA.html)
 
 </br>
 </br>
