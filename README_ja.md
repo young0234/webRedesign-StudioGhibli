@@ -1,6 +1,6 @@
 
 ---
-[README](https://github.com/dkssud-dus/webRedesign-StudioGhibli) | [README_ja](https://github.com/dkssud-dus/webRedesign-StudioGhibli/blob/main/README_ja.md)
+[README](https://github.com/young0234/webRedesign-StudioGhibli) | [README_ja](https://github.com/young0234/webRedesign-StudioGhibli/blob/main/README_ja.md)
 
 `#RedesignProject` `#Website` `#TeamProject` `#3PeopleTeam` `#Responsive` `#Mobile`
 # **Website Redesign Project Details:**
@@ -98,7 +98,7 @@
 
 ## 3. ページ別機能
 
-### 3.1. [メインページ](https://dkssud-dus.github.io/webRedesign-StudioGhibli/index_jp.html)
+### 3.1. [メインページ](https://young0234.github.io/webRedesign-StudioGhibli/index_jp.html)
 
 ---
 
@@ -324,7 +324,7 @@
 
 ---
 
-### 3.2.1. [Studio Ghibli情報](https://dkssud-dus.github.io/webRedesign-StudioGhibli/pages_jp/ghibli-data_jp.html)
+### 3.2.1. [Studio Ghibli情報](https://young0234.github.io/webRedesign-StudioGhibli/pages_jp/ghibli-data_jp.html)
 ![subpage-company-banner](https://github.com/user-attachments/assets/09ac48f0-9504-45e5-9a46-671e8a19d61b)
 
 <br/>
@@ -353,7 +353,7 @@
 </br>
 </br>
 
-### 3.2.2. [お知らせ](https://dkssud-dus.github.io/webRedesign-StudioGhibli/pages_jp/ghibli-news_jp.html)
+### 3.2.2. [お知らせ](https://young0234.github.io/webRedesign-StudioGhibli/pages_jp/ghibli-news_jp.html)
 ![subpage-news-banner](https://github.com/user-attachments/assets/d25938f7-5999-4969-a6e0-a8fc01b7cffa)
 
 <br/>
@@ -384,7 +384,7 @@
 </br>
 </br>
 
-### 3.2.3. [イベント](https://dkssud-dus.github.io/webRedesign-StudioGhibli/pages_jp/ghibi-event_jp.html)
+### 3.2.3. [イベント](https://young0234.github.io/webRedesign-StudioGhibli/pages_jp/ghibi-event_jp.html)
 ![subpage-event-banner](https://github.com/user-attachments/assets/ed6dfa8d-a62b-4a7a-bdf9-476bc5342643)
 
 <br/>
@@ -428,7 +428,7 @@
 </br>
 </br>
 
-### 3.2.4. [映画リスト](https://dkssud-dus.github.io/webRedesign-StudioGhibli/pages_jp/movie-list_jp.html)
+### 3.2.4. [映画リスト](https://young0234.github.io/webRedesign-StudioGhibli/pages_jp/movie-list_jp.html)
 ![subpage-movielist-banner](https://github.com/user-attachments/assets/94b940dd-aa11-4d2e-aee7-0c51f329acc9)
 
 <br/>
@@ -458,7 +458,7 @@
 </br>
 </br>
 
-### 3.2.4.1. [映画詳細](https://dkssud-dus.github.io/webRedesign-StudioGhibli/pages_kr/movie27.html)
+### 3.2.4.1. [映画詳細](https://young0234.github.io/webRedesign-StudioGhibli/pages_kr/movie27.html)
 ![subpage-movie-banner](https://github.com/user-attachments/assets/44584e19-1dc3-45ec-ab8b-38908a9c24bf)
 
 <br/>
@@ -511,7 +511,7 @@
 </br>
 </br>
 
-#### 3.2.5. [ジブリロケーション](https://dkssud-dus.github.io/webRedesign-StudioGhibli/pages_jp/total-ghibli_jp.html)
+#### 3.2.5. [ジブリロケーション](https://young0234.github.io/webRedesign-StudioGhibli/pages_jp/total-ghibli_jp.html)
 ![subpage-location](https://github.com/user-attachments/assets/bb4d111e-91ea-4076-8c82-d5cfcfe9da6b)
 
 <br/>
@@ -527,7 +527,7 @@
 </br>
 </br>
 
-#### 3.2.5.1. [ジブリパーク](https://dkssud-dus.github.io/webRedesign-StudioGhibli/pages_jp/ghibli-park_jp.html)
+#### 3.2.5.1. [ジブリパーク](https://young0234.github.io/webRedesign-StudioGhibli/pages_jp/ghibli-park_jp.html)
 ![subpage-park](https://github.com/user-attachments/assets/a6d9e4b1-3b96-4d56-b397-d94b237b8ab5)
 
 <br/>
@@ -545,7 +545,7 @@
 </br>
 </br>
 
-#### 3.2.5.2. [ジブリ美術館](https://dkssud-dus.github.io/webRedesign-StudioGhibli/pages_jp/ghibli-museum_jp.html)
+#### 3.2.5.2. [ジブリ美術館](https://young0234.github.io/webRedesign-StudioGhibli/pages_jp/ghibli-museum_jp.html)
 ![subpage-museum](https://github.com/user-attachments/assets/fc78825e-5491-4a51-8bb5-84dc74776f7f)
 
 <br/>
@@ -563,7 +563,7 @@
 </br>
 </br>
 
-#### 3.2.6. [Q&A](https://dkssud-dus.github.io/webRedesign-StudioGhibli/pages_jp/ghibli-QnA_jp.html)
+#### 3.2.6. [Q&A](https://young0234.github.io/webRedesign-StudioGhibli/pages_jp/ghibli-QnA_jp.html)
 ![subpage-qna-banner](https://github.com/user-attachments/assets/7d43857a-294a-4a20-9ed0-e552e8c294df)
 
 <br/>
