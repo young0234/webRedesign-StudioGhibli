@@ -239,30 +239,41 @@
 
 ---
 
-## 3. Resources
-### 3.1. Project Brief
+## 3. Read Project Details in Other Languages
+1. [English](https://github.com/young0234/webRedesign-StudioGhibli/blob/main/README_en.md)
+2. [한국어](https://github.com/young0234/webRedesign-StudioGhibli/blob/main/README_ko.md)
+3. [日本語](https://github.com/young0234/webRedesign-StudioGhibli/blob/main/README_ja.md)
+
+</br>
+</br>
+</br>
+
+---
+
+## 4. Resources
+### 4.1. Project Brief
 1. [Figma](https://www.figma.com/deck/RX7PbBWflA6PiqhygjYwkZ/-webRedesign--Studio-Ghibli--Project-Brief-?node-id=3-42&t=gu3YHL2VDh45GbFW-1)
 
 </br>
 </br>
 </br>
 
-### 3.2. Design Brief
+### 4.2. Design Brief
 1. [Figma](https://www.figma.com/design/78zRSUtttwvSDBZHKXUwP8/-webRedesign--Studio-Ghibli--Design-Brief-?node-id=2-2&t=sbWh2y9R0rBIrtvo-1)
 
 </br>
 </br>
 </br>
 
-### 3.3. Site URL
-#### 3.3.1. Main Page
+### 4.3. Site URL
+#### 4.3.1. Main Page
 1. [Main Page](https://dkssud-dus.github.io/webRedesign-StudioGhibli/)
 
 </br>
 </br>
 </br>
 
-#### 3.3.2. Sub Pages
+#### 4.3.2. Sub Pages
 1. [Studio Ghibli Information](https://young0234.github.io/webRedesign-StudioGhibli/pages_kr/ghibli-data.html)
 2. [Notice](https://young0234.github.io/webRedesign-StudioGhibli/pages_kr/ghibli-news.html)
 3. [Ghibli Event](https://young0234.github.io/webRedesign-StudioGhibli/pages_kr/ghibi-event.html)
