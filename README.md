@@ -267,7 +267,7 @@
 
 ### 4.3. Site URL
 #### 4.3.1. Main Page
-1. [Main Page](https://dkssud-dus.github.io/webRedesign-StudioGhibli/)
+1. [Main Page](https://young0234.github.io/webRedesign-StudioGhibli/)
 
 </br>
 </br>
